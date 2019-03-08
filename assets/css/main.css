@@ -1843,7 +1843,7 @@
 				left: 0;
 				width: 50%;
 				height: 1px;
-				background-color: rgba(0, 0, 0, 0.125);
+				background-color: rgba(0, 0, 0, 1);
 			}
 
 		.box .content {
