@@ -47,17 +47,35 @@
 					<div class="box">
 						<div class="content">
 							<header class="align-center">
-								<h2>What is the significance of genetic variants to those that carry them?</h2>
+								<h2>What is the significance of genetic variants to those who carry them?</h2>
 							</header>
-							The increasing use of next generation sequencing in the clinical arena is uncovering a large number of variants across all genes, but methods to predict their pathogenicity are not well established. This results in an increasing number of “variants of uncertain significance” (VUSs), a major emerging problem in genomic medicine. Rare variants (mutations) in the cardiac ion channels are implicated in diverse heart diseases, including, long QT syndrome (LQTS), short QT syndrome (SQTS), and Brugada syndrome (BrS), but are also common in healthy populations. While multiple algorithms predict whether ion channel variants are deleterious (SIFT, PolyPhen-2, PredSNP, CADD, etc.), too many neutral variants are classified as disease-causing. The long-term research interest of the laboratory is to improve our understanding of the clinical burden of ion channel non-synonymous single nucleotide polymorphisms (nsSNPs) on carriers. I believe predicting protein-specific functional phenotypes accurately of nsSNPs within these genes is the best path to reaching this goal. Our initial focus is on ion channels associated with Long QT Syndrome.</p>
+							The increasing use of next generation sequencing in the clinical arena is uncovering a large number of variants across all genes, but methods to
+							estimate their implications for a phenotype are underdeveloped, especially for rare variants. This results in an increasing number of “variants
+							of uncertain significance” (VUSs), a major emerging problem in genomic medicine. Rare variants (mutations) in the cardiac ion channels are
+							implicated in diverse heart diseases, including, long QT syndrome (LQTS), short QT syndrome (SQTS), and Brugada syndrome (BrS), but are also
+							common in healthy populations. While multiple algorithms predict whether ion channel variants are deleterious (SIFT, PolyPhen-2, PredSNP, CADD, etc.),
+							too many neutral variants are classified as disease-causing and the broad classification lacks insight into the probability a carrier manifests a
+							phenotype. The long-term research interest of the laboratory is to improve our understanding of the clinical burden of ion channel non-synonymous
+							single nucleotide variants (nsSNVs) on carriers. I believe calibrating our expectations for a clinically meaningful presentation by integrating
+							<i>in vitro</i> and <i>in silico</i>, variant-specific information is the best path to reaching this goal. Our initial focus is on ion channels
+							associated with Long QT Syndrome.</p>
 								<header class="align-center">
 									<h3>Perturbation of ion channel function and relationship to disease</h3>
 								</header>
 								<div class="row 200%">
 									<div class="6u 12u$(medium)">
-										<p>Current prediction algorithms fail to predict the effects of nsSNPs due in part to the inability of models to account for the many factors that prevent complete penetrance—noise from complicating genetic and environmental risk factors buries the protein-specific functional signal. To help illustrate this point I curated a set of nearly 1,400 nsSNPs from the available literature on SCN5A, including 304 variants that were at least partially functionally characterized. The results can be summarized as follows:
-										There is a range of tolerated NaV1.5 perturbation. There is also a range of perturbation that is not well tolerated. In both these extremes, clinical presentation is largely homogeneous. However, modest perturbations result in varied clinical presentations that are heterogeneous. This trend holds when comparing among different variants, but also holds within the population of carriers of a single variant (Table 1).
-										This highlights that SCN5A variant function is informative to an accurate risk of clinical presentation, probabilistically, and <i>in silico</i> models that can accurately predict changes in function may be of greater utility in clinical diagnosis than models that only predict binary "pathogenic" or "benign".</p>
+										<p>Current prediction algorithms fail to predict the effects of nsSNVs due in part to the inability of models to account for the many
+											factors that prevent complete penetrance—-genetic and environmental risk factors complicate the variant-specific effect. However, the
+											mechanism of many Mendelian diseases are known and can be identified by perturbations in specific pathways or specific protein functions.
+											illustrate this point I curated a set of nearly 1,400 nsSNVs from the available literature on <i>SCN5A</i>, including 304 variants
+											that were functionally characterized. The results can be summarized as follows: There is a range of tolerated
+											NaV1.5 perturbation. There is also a range of perturbation that is not well tolerated. In both these extremes, clinical presentation
+											is largely homogeneous, no real additional disease risk and substantial disease risk for carriers, respectively. However,
+											modest perturbations result in varied clinical presentations that are heterogeneous. This trend
+											holds among different variants, but also holds within the population of carriers of a single variant (Table 1).
+											This highlights that SCN5A variant function is informative to an accurate risk of clinical presentation, probabilistically,
+											and <i>in silico</i> models that can accurately predict changes in the probability of disease may be of greater utility in clinical
+											diagnosis than models that only predict binary "pathogenic" or "benign".</p>
 									</div>
 										<div class="6u$ 12u$(medium)">
 										<h5>Table 1. Example of intravariant (hetero/homo)geneity of clinical presentation<h5>
@@ -99,10 +117,28 @@
 										<header class="align-center">
 											<h3>Predicting ion channel function</h3>
 										</header>
-							<p>My laboratory addresses the challenge of VUSs by blending experimental and computational strategies: 1) structure and flexibility-induced changes from selected ion channel variants using a combination of Rosetta modeling, molecular dynamics in AMBER, and nuclear magnetic resonance (NMR) 2) experimental deep mutational scanning data sensitive to trafficking/functionally defective ion channel variants. 3) functional effects of variants in human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CMs). These technologies enable us to construct predictive models of ion channel phenotypes and validate the resulting predictions.</p>
-							<p><b>Computational and experimental structural biology.</b> The ultimate goal of generating phenotypes of any ion channel nsSNP is only currently possible <i>in silico</i>. My laboratory experimentally structurally characterizes domains of ion channels using NMR. Further, we develop fully solvated, full-atom trajectories of ion channels for comparison with NMR experimental data and for high-throughput variant flexibility determination <i>in silico</i>. The advantage of this approach is the capability of more high-throughput parallel running of variants <i>in silico</i> than could be concievably determined experimentally.</p>
-							<p><b>Deep mutational scanning</b>. Computational approaches will never eclipse the need for experimental data of some resolution. To complement large-scale variant characterization done computationally, my laboratory assays functionality of all codon substitutions within targeted segments in LQTS-implicated ion channels. This technology enables very high-throughput analysis of variants at relatively low resolution.</p>
-							<p><b>hiPSC-CM.</b> The relationship between function of ion channel variants characterized by heterologous expression and resulting action potential perturbations in people is not always straight forward. Though the there is a clear correlation between SCN5A variant perturbation measured by heterologous expression and clinical presentation, there are variants where relatively high minor allele frequency (MAF, as measured by gnomAD) conflicts with the severity of functional perturbation. This begs the question of whether the degree of perturbation is tolerable or whether the heterologous expression data are not representative of the true phenotypes in human cardiomyocytes. My laboratory tests ion channel variant phenotypes in the hiPSC-CM model system. This model system allows for a direct assessment of the variant-specific perturbation against isogenic controls.</p>
+							<p>My laboratory addresses the challenge of VUSs by blending experimental and computational strategies: 1) structure and
+								flexibility-induced changes from missense/in-frame insertion/deletion variants using a combination of Rosetta modeling, molecular
+								dynamics in AMBER, and nuclear magnetic resonance (NMR) 2) experimental deep mutational scanning data sensitive to
+								trafficking/functionally defective variants. 3) functional effects of variants in human induced pluripotent
+								stem cell-derived cardiomyocytes (hiPSC-CMs), especially the interaction between common, small-effect size disease-associated variants and rare,
+								large-effect size variants. These technologies enable us to construct predictive models of variant phenotypes and validate the resulting
+								predictions.</p>
+							<p><b>Computational and experimental structural biology.</b> The ultimate goal of generating phenotypes of any variant (starting with
+								ion channels) is only currently possible <i>in silico</i>. My laboratory develops <i>in silico</i> strategies, including fully solvated, full-atom
+								trajectories of membrane proteins compared with NMR experimental data and for high-throughput variant flexibility determination
+								<i>in silico</i>. The advantage of this approach is the capability of assessing the biophysical properties for all residues at once,
+								a much greater scale than could be conceivably determined experimentally.</p>
+							<p><b>Deep mutational scanning</b>. Though advances in the accuracy of computational approaches are impressive and clearly generate relevant information,
+								I do not believe these data will eclipse the need for experimental data of some resolution. To complement large-scale variant characterization done
+								computationally, my laboratory assays functionality of all codon substitutions within targeted segments in membrane proteins, starting with the
+								potassium channel KV11.1 (hERG/KCNH2). This technology enables very high-throughput analysis of variants at relatively low resolution.</p>
+							<p><b>hiPSC-CM.</b> Polygenic risk scores modify disease risk. However, how the polygenic risk score from common variants might interact differently
+								among specific rare, large effect-size variants has not been thoroughly explored. As mentioned above, there are many variants which induce striking
+								in vitro phenotype with inconsistent corresponding clinical phenotype. One hypothesis which could explain these inconsistencies is non-linear
+								interactions between specific rare variants and the common variant context. Another aspect of the Laboratory is generating model hiPS cell lines
+								sensitized by the accumulation of common, risk-associated alleles (those which compose a polygenic risk score) which allow us to probe the interaction
+								between the accumulation of these risk alleles and rare, large-effect variants.</p>
 
 							<header class="align-center">
 								<h3>Funding</h3>
