@@ -26,8 +26,7 @@
 						<li><a href="ResearchProjects.html">Research Projects</a></li>
 						<li><a href="People.html">People</a></li>
 						<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B" target="_blank">Publications</a></li>
-						<li><a href="Resources.html">Resources</a></li>
-						<li><a href="OpenPositions.html">Open Positions</a></li>
+                                                <li><a href="Resources.html">Resources</a></li>
 					</ul>
 				</nav>
 
@@ -42,118 +41,108 @@
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-center">
-								<h2>What is the significance of genetic variants to those who carry them?</h2>
-							</header>
-							<p>The increasing use of next generation sequencing in the clinical arena is uncovering a large number of variants across all genes, but methods to
-							estimate their implications for a phenotype are underdeveloped, especially for rare variants. This results in an increasing number of “variants
-							of uncertain significance” (VUSs), a major emerging problem in genomic medicine. Rare variants (mutations) in the cardiac ion channels are
-							implicated in diverse heart diseases, including, long QT syndrome (LQTS), short QT syndrome (SQTS), and Brugada syndrome (BrS), but are also
-							common in healthy populations. While multiple algorithms predict whether ion channel variants are deleterious (SIFT, PolyPhen-2, PredSNP, CADD, etc.),
-							too many neutral variants are classified as disease-causing and the broad classification lacks insight into the probability a carrier manifests a
-							phenotype. The long-term research interest of the laboratory is to improve our understanding of the clinical burden of ion channel non-synonymous
-							single nucleotide variants (nsSNVs) on carriers. I believe calibrating our expectations for a clinically meaningful presentation by integrating
-							<i>in vitro</i> and <i>in silico</i>, variant-specific information is the best path to reaching this goal. Our initial focus is on ion channels
-							associated with Long QT Syndrome. See also <a href="https://youtu.be/6k8YMC7NAzE" target="_blank">this talk</a> on YouTube for another 
-							overview of our research program.</p>
-								<header class="align-center">
-									<h3>Perturbation of ion channel function and relationship to disease</h3>
-								</header>
-								<div class="row 200%">
-									<div class="6u 12u$(medium)">
-										<p>Current prediction algorithms fail to predict the effects of nsSNVs due in part to the inability of models to account for the many
-											factors that prevent complete penetrance—-genetic and environmental risk factors complicate the variant-specific effect. However, the
-											mechanism of many Mendelian diseases are known and can be identified by perturbations in specific pathways or specific protein functions.
-											To illustrate this point, I curated a set of nearly 1,400 nsSNVs from the available literature on <i>SCN5A</i>, including 304 variants
-											that were functionally characterized. The results can be summarized as follows: There is a range of tolerated
-											NaV1.5 perturbation. There is also a range of perturbation that is not well tolerated. In both these extremes, clinical presentation
-											is largely homogeneous, no real additional disease risk and substantial disease risk for carriers, respectively. However,
-											modest perturbations result in varied clinical presentations that are heterogeneous. This trend
-											holds among different variants, but also holds within the population of carriers of a single variant (Table 1).
-											This highlights that SCN5A variant function is informative to an accurate risk of clinical presentation, probabilistically,
-											and <i>in silico</i> models that can accurately predict changes in the probability of disease may be of greater utility in clinical
-											diagnosis than models that only predict binary "pathogenic" or "benign".</p>
-									</div>
-										<div class="6u$ 12u$(medium)">
-										<h5>Table 1. Example of intravariant (hetero/homo)geneity of clinical presentation<h5>
-											<table>
-												<thead>
-													<tr>
-														<th>Variant</th>
-														<th>Peak Current[1]</th>
-														<th># Unaffected[2]</th>
-														<th># BrS1[3]</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>S1787N</td>
-														<td>95%</td>
-														<td>12</td>
-														<td>1</td>
-													</tr>
-													<tr>
-														<td>Y1795H</td>
-														<td>66%</td>
-														<td>7</td>
-														<td>5</td>
-													</tr>
-													<tr>
-														<td>R367H</td>
-														<td>0%</td>
-														<td>3</td>
-														<td>16</td>
-													</tr>
-												</tbody>
-											</table>
-													[1] A proxy for channel function
-													[2] Number of carriers without a clinical phenotype
-													[3] Number of carriers diagnosed with BrS1
-									</div>
-								</div>
-										<header class="align-center">
-											<h3>Predicting ion channel function</h3>
-										</header>
-							<p>My laboratory addresses the challenge of VUSs by blending experimental and computational strategies: 1) structure and
-								flexibility-induced changes from missense/in-frame insertion/deletion variants using a combination of Rosetta modeling, molecular
-								dynamics in AMBER, and nuclear magnetic resonance (NMR) 2) experimental deep mutational scanning data sensitive to
-								trafficking/functionally defective variants. 3) functional effects of variants in human induced pluripotent
-								stem cell-derived cardiomyocytes (hiPSC-CMs), especially the interaction between common, small-effect size disease-associated variants and rare,
-								large-effect size variants. These technologies enable us to construct predictive models of variant phenotypes and validate the resulting
-								predictions.</p>
-							<p><b>Computational and experimental structural biology.</b> The ultimate goal of generating phenotypes of any variant (starting with
-								ion channels) is only currently possible <i>in silico</i>. My laboratory develops <i>in silico</i> strategies, including fully solvated, full-atom
-								trajectories of membrane proteins compared with NMR experimental data and for high-throughput variant flexibility determination
-								<i>in silico</i>. The advantage of this approach is the capability of assessing the biophysical properties for all residues at once,
-								a much greater scale than could be conceivably determined experimentally.</p>
-							<p><b>Deep mutational scanning</b>. Though advances in the accuracy of computational approaches are impressive and clearly generate relevant information,
-								I do not believe these data will eclipse the need for experimental data of some resolution. To complement large-scale variant characterization done
-								computationally, my laboratory assays functionality of all codon substitutions within targeted segments in membrane proteins, starting with the
-								potassium channel KV11.1 (hERG/KCNH2). This technology enables very high-throughput analysis of variants at relatively low resolution.</p>
-							<p><b>hiPSC-CM.</b> Polygenic risk scores modify disease risk. However, how the polygenic risk score from common variants might interact differently
-								among specific rare, large effect-size variants has not been thoroughly explored. As mentioned above, there are many variants which induce striking
-								in vitro phenotype with inconsistent corresponding clinical phenotype. One hypothesis which could explain these inconsistencies is non-linear
-								interactions between specific rare variants and the common variant context. Another aspect of the Laboratory is generating model hiPS cell lines
-								sensitized by the accumulation of common, risk-associated alleles (those which compose a polygenic risk score) which allow us to probe the interaction
-								between the accumulation of these risk alleles and rare, large-effect variants.</p>
-
-							<header class="align-center">
-								<h3>Funding</h3>
-							</header>
-							<p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p>
-							<span class="image left"><img  src="images/NHLBI.png"  alt="" /></span>
-							<span class="image center"><img  src="images/DHHS.png"  alt="" /></span>
-							<span class="image right"><img  src="images/VUMC.png"  alt="" /></span><p><p>
-							<p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p>
-							<p>This work is funded by National Institutes of Health grant R01 HL16086, American Heart Association Career Development Award 848898, Leducq Transatlantic network 18CVD05, and Vanderbilt University Medical Center.
-							</div>
-					</div>
-				</div>
-			</section>
+		<section id="two" class="wrapper style2">
+		<div class="inner">
+		<div class="box">
+		<div class="content">
+		<header class="align-center">
+		<h2>What is the significance of genetic variants to those who carry them?</h2>
+		</header>
+                <p>
+                Next-generation sequencing has revealed countless variants across the genome, yet translating those observations into patient-level insights remains challenging, especially for rare alleles. Our lab is focused on resolving variants of uncertain significance by integrating <i>in vitro</i> and <i>in silico</i> evidence to quantify disease probability rather than relying on binary pathogenicity labels. We begin with cardiac ion channel genes implicated in long QT syndrome, Brugada syndrome, and related arrhythmias because they offer a tractable system for connecting molecular mechanism to clinical outcome. For an overview of our approach, watch <a href="https://youtu.be/6k8YMC7NAzE" target="_blank">this talk</a> on YouTube.
+                </p>
+		<p>
+		We combine high-throughput functional genomics, CRISPR-edited induced pluripotent stem cell models, and Bayesian statistical frameworks to estimate variant-induced penetrance. This strategy enables us to understand how polygenic background modifies the expressivity of rare variants and to deliver clinically actionable risk profiles for patients and families.
+		</p>
+		<header class="align-center">
+		<h3>Research innovation</h3>
+		</header>
+		<ul class="alt">
+		<li>
+		<strong>Functional genomics + predictive modeling (2018&ndash;present).</strong>
+		We pioneered deep mutational scanning and scalable automated patch clamp assays to interpret cardiac ion channel variants. These data feed predictive models that estimate disease penetrance for individual carriers.
+		</li>
+		<li>
+		<strong>Bayesian penetrance estimation.</strong>
+		Our patented <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) provides a framework for incorporating functional data, clinical observations, and genetic background to refine risk estimates.
+		</li>
+		<li>
+		<strong>VariantBrowser.org.</strong>
+		We develop and maintain a widely used portal that distributes these resources to clinicians, genetic counselors, and researchers worldwide, ensuring that discoveries rapidly inform care.
+		</li>
+		</ul>
+		<header class="align-center">
+		<h3>Perturbation of ion channel function and relationship to disease</h3>
+		</header>
+		<div class="row 200%">
+		<div class="6u 12u$(medium)">
+		<p>
+		Current prediction algorithms struggle to incorporate the diverse genetic and environmental factors that shape penetrance. By curating more than 1,400 <i>SCN5A</i> variants&mdash;including 304 with functional data&mdash;we show that modest perturbations yield heterogeneous clinical presentations, whereas extreme loss or gain of function produces more consistent outcomes. Modeling the probability of disease from functional effects therefore offers a clearer path to clinical decision-making than binary classifications.
+		</p>
+		</div>
+		<div class="6u$ 12u$(medium)">
+		<h5>Table 1. Intravariant heterogeneity of clinical presentation</h5>
+		<table>
+		<thead>
+		<tr>
+		<th>Variant</th>
+		<th>Peak current&nbsp;[1]</th>
+		<th># unaffected&nbsp;[2]</th>
+		<th># BrS1&nbsp;[3]</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>S1787N</td>
+		<td>95%</td>
+		<td>12</td>
+		<td>1</td>
+		</tr>
+		<tr>
+		<td>Y1795H</td>
+		<td>66%</td>
+		<td>7</td>
+		<td>5</td>
+		</tr>
+		<tr>
+		<td>R367H</td>
+		<td>0%</td>
+		<td>3</td>
+		<td>16</td>
+		</tr>
+		</tbody>
+		</table>
+		<p class="small">
+		[1] Proxy for channel function<br />
+		[2] Carriers without a clinical phenotype<br />
+		[3] Carriers diagnosed with BrS1
+		</p>
+		</div>
+		</div>
+		<header class="align-center">
+		<h3>Predicting ion channel function</h3>
+		</header>
+		<p>
+		Our work blends experimental and computational strategies to characterize variant effects at scale. We interrogate structural consequences with Rosetta modeling, molecular dynamics in AMBER, and NMR, and we generate functional measurements through deep mutational scanning and automated patch clamp platforms. These complementary approaches allow us to build predictive models that can be validated in disease-relevant systems.
+		</p>
+		<p>
+		Polygenic risk scores modify disease susceptibility. By engineering induced pluripotent stem cell cardiomyocytes with defined genetic backgrounds, we test how common alleles modulate the expressivity of rare, large-effect variants. These CRISPR-edited model systems let us explore nonlinear interactions that influence arrhythmia risk and treatment response.
+		</p>
+		<header class="align-center">
+		<h3>Grants and funding</h3>
+		</header>
+		<p>
+		Our research is supported by NIH R01HL160863 ($2.8M, 2022&ndash;2027), NIH K99/R00 HL135442 ($1M, 2017&ndash;2022), and the American Heart Association Career Development Award ($230K, 2021&ndash;2024).
+		</p>
+		<p>
+		<span class="image left"><img src="images/NHLBI.png" alt="National Heart, Lung, and Blood Institute" /></span>
+		<span class="image center"><img src="images/DHHS.png" alt="U.S. Department of Health and Human Services" /></span>
+		<span class="image right"><img src="images/VUMC.png" alt="Vanderbilt University Medical Center" /></span>
+		</p>
+		</div>
+		</div>
+		</div>
+		</section>
 
 		<!-- Footer -->
 			<footer id="footer">
