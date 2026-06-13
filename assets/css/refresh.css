@@ -1,0 +1,454 @@
+/*
+	Kroncke Laboratory — modern refresh layer (2026)
+	Loads AFTER assets/css/main.css and overrides it on equal specificity.
+	Keeps the Hielo template structure, imagery, banner slider, and parallax.
+	Remove this stylesheet (and refresh.js) to revert to the stock template.
+*/
+
+/* ---------------------------------------------------------------- Tokens */
+
+:root {
+	--brand:        #8a4680;   /* core plum identity (unchanged) */
+	--brand-600:    #793d70;
+	--brand-700:    #5f2f58;
+	--brand-400:    #a85a9c;
+	--brand-300:    #c98fbf;
+	--brand-50:     #f6eef4;
+	--brand-grad:   linear-gradient(135deg, #8a4680 0%, #b1568f 100%);
+
+	--ink:          #1b141f;   /* warm near-black */
+	--ink-soft:     #443c4b;
+	--muted:        #6f6776;
+	--line:         rgba(27, 20, 31, 0.12);
+
+	--bg:           #ffffff;
+	--bg-soft:      #f7f3f8;   /* faint lavender, replaces flat #f2f2f2 */
+	--bg-dark:      #160f1a;
+
+	--shadow-sm:    0 1px 2px rgba(20, 12, 24, 0.05), 0 2px 10px rgba(20, 12, 24, 0.06);
+	--shadow-md:    0 14px 34px -16px rgba(20, 12, 24, 0.30);
+	--shadow-lg:    0 28px 64px -22px rgba(20, 12, 24, 0.42);
+
+	--radius:       16px;
+	--radius-lg:    22px;
+	--maxw:         1180px;
+}
+
+/* ---------------------------------------------------------- Base & type */
+
+html { scroll-behavior: smooth; }
+
+body {
+	background-color: var(--bg);
+	color: var(--ink-soft);
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body, input, select, textarea { font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--ink);
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+}
+
+h2 { font-size: 2.1rem; }
+h3 { font-size: 1.4rem; }
+
+p { line-height: 1.75; }
+
+a { color: var(--brand); transition: color 0.18s ease; }
+a:hover { color: var(--brand-600); }
+
+strong, b { color: var(--ink); }
+
+/* readable measure for body copy inside content cards */
+.box .content > p,
+.box .content > ul,
+.box .content > ol { max-width: 72ch; }
+.box .content > p,
+.box .content > ul,
+.box .content > ol,
+.box .content > header { margin-left: auto; margin-right: auto; }
+
+/* ----------------------------------------------- Section rhythm & bands */
+
+.wrapper > .inner { max-width: var(--maxw); }
+
+.wrapper.style2 {
+	background-color: var(--bg-soft);
+	color: var(--ink-soft);
+}
+
+/* alternating sections read cleaner: #two on the home page goes pure white */
+#two.wrapper.style2 { background-color: var(--bg); }
+
+/* Dark parallax band — brand-tinted scrim over the fixed image */
+.wrapper.style3 {
+	background-color: var(--bg-dark);
+	color: rgba(255, 255, 255, 0.78);
+	background-image:
+		linear-gradient(180deg, rgba(20, 12, 24, 0.74) 0%, rgba(28, 16, 34, 0.82) 100%),
+		url(../../images/kcne3.jpg);
+}
+.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3 { color: #fff; }
+.wrapper.style3 header p { color: var(--brand-300); }
+
+/* ------------------------------------------------- Eyebrow → heading kit */
+
+header.align-center > p {
+	color: var(--brand);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.72rem;
+	letter-spacing: 0.22em;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 0.9rem;
+	margin-bottom: 0.6rem;
+}
+header.align-center > p:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 46px;
+	height: 3px;
+	border-radius: 3px;
+	background: var(--brand-grad);
+}
+.wrapper.style3 header.align-center > p:after { background: var(--brand-300); }
+
+/* ------------------------------------------------------------ Cards/box */
+
+.box {
+	background: var(--bg);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	overflow: hidden;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.box:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.box .image.fit img,
+.box .image.fit video {
+	border-radius: 0;
+	display: block;
+}
+
+.box .content { padding: 2.6rem; }
+
+/* the small "eyebrow" caption inside a box */
+.box header p {
+	color: var(--brand);
+	font-weight: 600;
+	letter-spacing: 0.2em;
+}
+.box header p:after { background: var(--brand-grad); height: 3px; width: 46px; border-radius: 3px; }
+.box header h2 { margin-bottom: 1.4rem; }
+
+@media screen and (max-width: 736px) {
+	.box .content { padding: 1.8rem; }
+	h2 { font-size: 1.7rem; }
+}
+
+/* --------------------------------------------------------------- Buttons */
+
+input[type="submit"], input[type="reset"], input[type="button"],
+button, .button, .button.alt {
+	background-image: var(--brand-grad);
+	background-color: var(--brand);
+	color: #fff !important;
+	border: 0;
+	border-radius: 999px;
+	box-shadow: 0 8px 20px -8px rgba(138, 70, 128, 0.6);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.button:hover, .button.alt:hover,
+button:hover, input[type="submit"]:hover {
+	color: #fff !important;
+	transform: translateY(-2px);
+	box-shadow: 0 14px 28px -10px rgba(138, 70, 128, 0.7);
+	filter: saturate(1.08);
+}
+.button:active, .button.alt:active { transform: translateY(0); }
+
+/* On the dark band, give the button a crisp edge */
+.wrapper.style3 .button,
+.wrapper.style3 .button.alt {
+	box-shadow: 0 10px 26px -8px rgba(0, 0, 0, 0.55);
+}
+
+/* --------------------------------------------------------------- Header */
+
+#header {
+	background: rgba(22, 15, 26, 0.82);
+	-webkit-backdrop-filter: saturate(160%) blur(12px);
+	backdrop-filter: saturate(160%) blur(12px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	height: 3.55em;
+	line-height: 3.55em;
+}
+#header .logo a, #header > .logo a {
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+/* transparent + immersive while over the banner (home page) */
+#header.alt {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0));
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
+	border-bottom-color: transparent;
+}
+
+/* ----------------------------------------------------------- Side menu */
+
+#menu { background: #1d1422; }
+#menu .links li a { border-top-color: rgba(255, 255, 255, 0.08); }
+#menu .links li a:hover { color: var(--brand-300); }
+
+/* --------------------------------------------------------------- Banner */
+
+/* gradient scrim instead of a flat 35% black — better legibility, modern */
+.banner > article:after {
+	background: linear-gradient(180deg,
+		rgba(18, 11, 22, 0.30) 0%,
+		rgba(18, 11, 22, 0.42) 45%,
+		rgba(18, 11, 22, 0.72) 100%);
+	opacity: 1;
+}
+.banner > article h2 {
+	font-size: clamp(2.6rem, 6vw, 5.4rem);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+}
+.banner > article p {
+	color: rgba(255, 255, 255, 0.92);
+	font-weight: 500;
+	letter-spacing: 0.18em;
+	font-size: 0.95rem;
+}
+.banner > article p:after { background-color: rgba(255, 255, 255, 0.55); height: 2px; }
+
+/* indicators: larger, active dot uses the brand */
+.banner .indicators li:before {
+	width: 0.7em; height: 0.7em;
+	background: rgba(255, 255, 255, 0.4);
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+.banner .indicators li.visible:before {
+	background: var(--brand-300);
+	transform: scale(1.25);
+}
+
+/* --------------------------------------------------------------- Footer */
+
+#footer {
+	background: var(--bg-dark);
+	border-top: 3px solid transparent;
+	border-image: var(--brand-grad) 1;
+	color: rgba(255, 255, 255, 0.62);
+	line-height: 1.85;
+}
+#footer a { color: rgba(255, 255, 255, 0.6); }
+#footer a:hover { color: var(--brand-300); }
+#footer .icons a { transition: color 0.2s ease, transform 0.2s ease; }
+#footer .icons a:hover { transform: translateY(-2px); }
+
+/* ------------------------------------------------------ Lists & tables */
+
+ul.alt li { border-top-color: var(--line); }
+
+table { box-shadow: var(--shadow-sm); border-radius: 12px; overflow: hidden; }
+table thead { background: var(--brand); }
+table thead th { color: #fff; border-bottom: 0; }
+table tbody tr:nth-child(2n) { background-color: var(--brand-50); }
+
+/* funding logos: tidy, grayscale-to-color on hover */
+.box .content img[alt*="Institute"],
+.box .content img[alt*="Health"],
+.box .content img[alt*="Medical"] { filter: grayscale(0.15); }
+
+/* =================================================================
+   New components used by the refreshed content
+   ================================================================= */
+
+/* eyebrow label usable anywhere */
+.eyebrow {
+	display: inline-block;
+	color: var(--brand);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.72rem;
+	letter-spacing: 0.22em;
+	margin: 0 0 0.6rem;
+}
+
+/* tech / topic tags */
+.tags { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags li, .tag {
+	display: inline-block;
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--brand-700);
+	background: var(--brand-50);
+	border: 1px solid rgba(138, 70, 128, 0.18);
+	border-radius: 999px;
+	padding: 0.32em 0.85em;
+}
+
+/* responsive grid for thrusts / tools */
+.lab-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	gap: 1.4rem;
+	margin: 2.2rem 0 0;
+	text-align: left;
+}
+
+/* a research-thrust / tool card */
+.thrust {
+	background: var(--bg);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	padding: 1.7rem 1.6rem;
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+	display: flex;
+	flex-direction: column;
+}
+.thrust:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-md);
+	border-color: rgba(138, 70, 128, 0.35);
+}
+.thrust .ico {
+	width: 46px; height: 46px;
+	border-radius: 12px;
+	display: grid; place-items: center;
+	background: var(--brand-grad);
+	color: #fff; font-size: 1.35rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 8px 18px -8px rgba(138, 70, 128, 0.65);
+}
+.thrust h4 { margin: 0 0 0.5rem; font-size: 1.12rem; color: var(--ink); }
+.thrust p { margin: 0; font-size: 0.96rem; color: var(--ink-soft); }
+.thrust .meta {
+	margin-top: auto;
+	padding-top: 1rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+.thrust .meta a { text-decoration: none; }
+.thrust .meta a:after { content: " \2197"; font-weight: 700; }
+
+/* tool card with a mono repo name */
+.tool .repo {
+	font-family: "Courier New", monospace;
+	font-weight: 700;
+	color: var(--brand-700);
+	font-size: 0.95rem;
+}
+
+/* headline stats row */
+.stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 1rem;
+	margin: 2rem 0 0;
+	text-align: center;
+}
+.stat {
+	padding: 1.2rem 0.8rem;
+	border-radius: var(--radius);
+	background: var(--brand-50);
+	border: 1px solid rgba(138, 70, 128, 0.16);
+}
+.stat .n {
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--brand);
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+}
+.stat .l {
+	display: block;
+	font-size: 0.8rem;
+	color: var(--muted);
+	margin-top: 0.25rem;
+}
+
+/* a soft callout / pull box */
+.callout {
+	border-left: 4px solid var(--brand);
+	background: var(--brand-50);
+	border-radius: 0 12px 12px 0;
+	padding: 1.1rem 1.3rem;
+	margin: 1.6rem auto;
+	max-width: 72ch;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* ----------------------------------------------------- Scroll reveals */
+
+.reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+	            transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* scroll progress bar */
+#scroll-progress {
+	position: fixed;
+	top: 0; left: 0;
+	height: 3px;
+	width: 0%;
+	background: var(--brand-grad);
+	z-index: 11000;
+	transition: width 0.08s linear;
+	pointer-events: none;
+}
+
+/* back-to-top */
+#to-top {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	width: 2.85rem;
+	height: 2.85rem;
+	border-radius: 50%;
+	border: 0;
+	background: var(--brand-grad);
+	color: #fff;
+	font-size: 1.1rem;
+	cursor: pointer;
+	box-shadow: var(--shadow-md);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+	z-index: 10500;
+}
+#to-top.show { opacity: 1; visibility: visible; transform: none; }
+#to-top:hover { filter: saturate(1.1); transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	.reveal { opacity: 1; transform: none; transition: none; }
+	.box:hover, .thrust:hover { transform: none; }
+}

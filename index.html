@@ -6,10 +6,20 @@
 -->
 <html>
 	<head>
-		<title>Kroncke Laboratory</title>
+		<title>Kroncke Laboratory — Translational Cardiogenetics, Vanderbilt</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="The Kroncke Lab at Vanderbilt University Medical Center quantifies what genetic variants mean for the people who carry them — pairing high-throughput functional genomics, iPSC-derived cardiomyocytes, protein structure, LLM-assisted literature curation, and Bayesian modeling to estimate disease penetrance in cardiac arrhythmia genes." />
+		<meta name="author" content="Brett Kroncke" />
+		<meta name="theme-color" content="#8a4680" />
+		<meta property="og:title" content="Kroncke Laboratory — Translational Cardiogenetics" />
+		<meta property="og:description" content="Estimating the significance of genetic variants — from binary labels to calibrated, individualized penetrance." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="images/maptostructurefreq.jpg" />
+		<meta property="og:url" content="https://kroncke-lab.github.io/" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/refresh.css" />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	</head>
 	<body>
 
@@ -77,7 +87,7 @@
 										<h2>Research Program</h2>
 									</header>
                                                                         <p>
-                                                                                We are driven to understand how genetics shapes an individual's risk for disease or adverse outcomes. The Kroncke Lab pairs high-throughput assays, CRISPR-edited model systems, and statistical modeling to map how ion channel variants influence disease penetrance. Our team integrates functional data with genomic interpretation to clarify variants of uncertain significance in genes such as <i>KCNH2</i> and <i>SCN5A</i> and to identify how polygenic background modifies expressivity in induced pluripotent stem cell-derived cardiomyocytes.
+                                                                                We are driven to understand how genetics shapes an individual's risk for disease or adverse outcomes. The Kroncke Lab pairs high-throughput functional assays, CRISPR-edited stem-cell models, protein structure, and Bayesian statistical modeling to estimate how genetic variants influence disease penetrance &mdash; replacing binary &ldquo;pathogenic / benign&rdquo; labels with calibrated, individualized risk. We build an open-source pipeline that mines the literature with large language models, aggregates predictive features, and folds in 3D structural priors to clarify variants of uncertain significance in cardiac arrhythmia genes such as <i>KCNH2</i> and <i>SCN5A</i> &mdash; and we are now extending the same framework to atrial fibrillation.
                                                                         </p>
                                                                         <p>
                                                                                 See <a href="https://youtu.be/6k8YMC7NAzE" target="_blank">this talk</a> on YouTube for an overview of our research program.
@@ -103,7 +113,7 @@
                                                                                 Above is a video highlighting an intersection of protein structure and clinical presentation, in this case for the sodium ion channel Nav1.5 (gene <i>SCN5A</i>). Variants associated with Brugada syndrome (BrS1, blue), type 3 long QT syndrome (LQT3, red), or unaffected carriers (gold) are shown as spheres. This representation suggests the utility of using structure and residue annotation to understand mechanism and generate predictions about yet uncharacterized variants found in structured regions.
                                                                         </p>
                                                                         <p>
-                                                                                Our patented <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) and the VariantBrowser.org portal translate these insights into tools that clinicians and researchers worldwide rely on daily.
+                                                                                Recent work spans the most comprehensive variant-effect map to date for <i>KCNH2</i>/Kv11.1 by deep mutational scanning, quantitative proteomics of Kv11.1 trafficking under elevated QT polygenic risk in iPSC-cardiomyocytes (2026), and survival modeling of breakthrough cardiac events in <i>KCNH2</i> carriers on beta-blockers. Our patented <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) and the <a href="https://variantbrowser.org" target="_blank">VariantBrowser.org</a> portal translate these insights into tools clinicians and researchers rely on.
                                                                         </p>
 									<footer class="align-center">
 										<a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank" class="button alt">Publication List</a>
@@ -125,6 +135,60 @@
                                                 <a href="ResearchProjects.html" class="button alt">Our Approach</a>
                                         </header>
                                 </div>
+			</section>
+
+		<!-- Focus -->
+			<section id="focus" class="wrapper style2">
+				<div class="inner">
+					<header class="align-center">
+						<p>What we are working on now</p>
+						<h2>Current Focus</h2>
+					</header>
+					<div class="lab-grid">
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-search" aria-hidden="true"></i></span>
+							<h4>LLM-assisted evidence curation</h4>
+							<p>Large-language-model pipelines mine PubMed for variant, phenotype, and carrier evidence, then a multi-model consensus scores gene&ndash;disease validity against the ClinGen SOP.</p>
+						</div>
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-database" aria-hidden="true"></i></span>
+							<h4>Multi-source variant features</h4>
+							<p>We unify AlphaMissense, REVEL, CADD, ClinVar, and gnomAD into one queryable resource, so every variant carries the same panel of evidence.</p>
+						</div>
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+							<h4>Structure-aware priors</h4>
+							<p>AlphaFold models and elastic-network analysis place variants in 3D, letting pathogenic neighborhoods inform priors for nearby variants of uncertain significance.</p>
+						</div>
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+							<h4>Bayesian penetrance</h4>
+							<p>A probabilistic model fuses carrier counts, predictive features, and structural priors into penetrance estimates with full uncertainty &mdash; our patented framework.</p>
+						</div>
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-flask" aria-hidden="true"></i></span>
+							<h4>High-throughput function</h4>
+							<p>Deep mutational scanning and automated patch clamp measure variant effects at scale, including the most complete <i>KCNH2</i>/Kv11.1 map to date.</p>
+						</div>
+
+						<div class="thrust">
+							<span class="ico"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+							<h4>Stem-cell &amp; clinical models</h4>
+							<p>CRISPR-edited iPSC-cardiomyocytes test how polygenic background shifts expressivity, and survival models flag breakthrough cardiac events despite beta-blocker therapy.</p>
+						</div>
+
+					</div>
+					<ul class="tags" style="justify-content:center;">
+						<li>Long QT syndrome</li><li>Brugada syndrome</li><li>Atrial fibrillation</li>
+						<li>KCNH2</li><li>SCN5A</li><li>KCNQ1</li><li>RyR2</li>
+						<li>AlphaFold</li><li>PyMC</li><li>iPSC-CMs</li>
+					</ul>
+				</div>
 			</section>
 
 		<!-- Two -->
@@ -189,6 +253,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/refresh.js"></script>
 
 	</body>
 </html>

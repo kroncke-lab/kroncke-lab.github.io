@@ -6,10 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Research Projects</title>
+		<title>Research Projects — Kroncke Laboratory</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="The Kroncke Lab's research program: an integrated, open-source pipeline that combines LLM-assisted literature curation, multi-source variant features, AlphaFold structural priors, and Bayesian modeling to estimate disease penetrance — paired with deep mutational scanning, automated patch clamp, and iPSC-cardiomyocyte models." />
+		<meta name="author" content="Brett Kroncke" />
+		<meta name="theme-color" content="#8a4680" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/refresh.css" />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	</head>
 	<body class="subpage">
 
@@ -52,8 +57,53 @@
                 Next-generation sequencing has revealed countless variants across the genome, yet translating those observations into patient-level insights remains challenging, especially for rare alleles. Our lab is focused on resolving variants of uncertain significance by integrating <i>in vitro</i> and <i>in silico</i> evidence to quantify disease probability rather than relying on binary pathogenicity labels. We begin with cardiac ion channel genes implicated in long QT syndrome, Brugada syndrome, and related arrhythmias because they offer a tractable system for connecting molecular mechanism to clinical outcome. For an overview of our approach, watch <a href="https://youtu.be/6k8YMC7NAzE" target="_blank">this talk</a> on YouTube.
                 </p>
 		<p>
-		We combine high-throughput functional genomics, CRISPR-edited induced pluripotent stem cell models, and Bayesian statistical frameworks to estimate variant-induced penetrance. This strategy enables us to understand how polygenic background modifies the expressivity of rare variants and to deliver clinically actionable risk profiles for patients and families.
+		We combine high-throughput functional genomics, CRISPR-edited induced pluripotent stem cell models, protein structure, and Bayesian statistical frameworks to estimate variant-induced penetrance. Increasingly, this work runs on an integrated, open-source pipeline: large language models read the literature, predictive features and 3D structure are folded into priors, and a probabilistic model returns calibrated risk with explicit uncertainty &mdash; helping us understand how polygenic background modifies the expressivity of rare variants and deliver actionable risk profiles for patients and families.
 		</p>
+
+		<div class="stats">
+			<div class="stat"><span class="n">1,400+</span><span class="l">SCN5A variants curated</span></div>
+			<div class="stat"><span class="n">5</span><span class="l">evidence sources unified</span></div>
+			<div class="stat"><span class="n">5&times;</span><span class="l">LLM consensus per curation</span></div>
+			<div class="stat"><span class="n">3</span><span class="l">genes live on VariantBrowser.org</span></div>
+		</div>
+
+		<header class="align-center">
+		<h3>How the pipeline works</h3>
+		</header>
+		<div class="lab-grid">
+			<div class="thrust tool">
+				<span class="ico"><i class="fa fa-search" aria-hidden="true"></i></span>
+				<h4>1 &middot; Curate</h4>
+				<p>LLM agents pull per-variant carrier counts, phenotypes, and study context from PubMed, then a multi-model consensus scores gene&ndash;disease validity against the ClinGen SOP.</p>
+				<div class="meta">
+					<a href="https://github.com/kroncke-lab/GeneVariantFetcher" target="_blank">GeneVariantFetcher</a> &middot;
+					<a href="https://github.com/kroncke-lab/GenePhenExtract" target="_blank">GenePhenExtract</a>
+				</div>
+			</div>
+			<div class="thrust tool">
+				<span class="ico"><i class="fa fa-database" aria-hidden="true"></i></span>
+				<h4>2 &middot; Annotate</h4>
+				<p>We aggregate AlphaMissense, REVEL, CADD, ClinVar, and gnomAD into one unified database, so every variant carries the same panel of predictive evidence.</p>
+				<div class="meta">
+					<a href="https://github.com/kroncke-lab/VariantFeatures" target="_blank">variantFeatures</a>
+				</div>
+			</div>
+			<div class="thrust tool">
+				<span class="ico"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+				<h4>3 &middot; Localize</h4>
+				<p>Variants are mapped onto AlphaFold structures with elastic-network analysis, so pathogenic clusters raise the prior for nearby variants of uncertain significance.</p>
+				<div class="meta" style="color:var(--muted);">ProteinProximityAnalysis &middot; in development</div>
+			</div>
+			<div class="thrust tool">
+				<span class="ico"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+				<h4>4 &middot; Estimate</h4>
+				<p>A Bayesian model fuses carriers, features, and structural priors into penetrance estimates with full uncertainty &mdash; our patented method &mdash; published through the browser.</p>
+				<div class="meta">
+					<a href="https://variantbrowser.org" target="_blank">VariantBrowser.org</a>
+				</div>
+			</div>
+		</div>
+
 		<header class="align-center">
 		<h3>Research innovation</h3>
 		</header>
@@ -65,6 +115,10 @@
 		<li>
 		<strong>Bayesian penetrance estimation.</strong>
 		Our patented <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) provides a framework for incorporating functional data, clinical observations, and genetic background to refine risk estimates.
+		</li>
+		<li>
+		<strong>LLM-assisted literature and gene&ndash;disease curation.</strong>
+		Large language models extract variant, phenotype, and carrier evidence from the published record at scale, and a multi-model consensus reproduces ClinGen-style gene&ndash;disease validity classifications &mdash; turning months of manual curation into a reviewable, auditable workflow.
 		</li>
 		<li>
 		<strong>VariantBrowser.org.</strong>
@@ -126,8 +180,23 @@
 		Our work blends experimental and computational strategies to characterize variant effects at scale. We interrogate structural consequences with Rosetta modeling, molecular dynamics in AMBER, and NMR, and we generate functional measurements through deep mutational scanning and automated patch clamp platforms. These complementary approaches allow us to build predictive models that can be validated in disease-relevant systems.
 		</p>
 		<p>
-		Polygenic risk scores modify disease susceptibility. By engineering induced pluripotent stem cell cardiomyocytes with defined genetic backgrounds, we test how common alleles modulate the expressivity of rare, large-effect variants. These CRISPR-edited model systems let us explore nonlinear interactions that influence arrhythmia risk and treatment response.
+		Polygenic risk scores modify disease susceptibility. By engineering induced pluripotent stem cell cardiomyocytes with defined genetic backgrounds, we test how common alleles modulate the expressivity of rare, large-effect variants. In recent work (2026), we used quantitative proteomics to show how elevated QT polygenic risk reshapes Kv11.1 (hERG) trafficking networks in these cardiomyocytes &mdash; connecting common-variant background to a concrete molecular mechanism. These CRISPR-edited model systems let us explore nonlinear interactions that influence arrhythmia risk and treatment response.
 		</p>
+
+		<header class="align-center">
+		<h3>Extending to atrial fibrillation</h3>
+		</header>
+		<p>
+		The framework is gene-agnostic, and we are now applying it beyond long QT and Brugada syndromes. A current pilot brings our LLM-assisted, ClinGen-style gene&ndash;disease validity curation to atrial fibrillation, starting with <i>NPPA</i>, <i>GJA5</i>, <i>KCNA5</i>, and <i>PITX2</i> &mdash; reproducing expert curation in a transparent, reviewable workflow that can scale to many more genes.
+		</p>
+
+		<header class="align-center">
+		<h3>Clinical translation: breakthrough events</h3>
+		</header>
+		<p>
+		Knowing a variant is pathogenic is not the same as knowing whether a patient will do well on treatment. Using harmonized international cohorts, we build survival models of &ldquo;breakthrough&rdquo; cardiac events &mdash; events that occur <em>despite</em> beta-blocker therapy &mdash; in <i>KCNH2</i> (type 2 long QT syndrome) carriers, with the goal of flagging the individuals who need more aggressive management before an event occurs.
+		</p>
+
 		<header class="align-center">
 		<h3>Grants and funding</h3>
 		</header>
@@ -161,6 +230,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/refresh.js"></script>
 
 	</body>
 </html>

@@ -6,10 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Resources</title>
+		<title>Resources — Kroncke Laboratory</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Open-source tools and data from the Kroncke Lab: VariantBrowser.org, LLM-assisted literature curation, unified variant feature databases, deep mutational scanning, and Bayesian penetrance code for cardiac arrhythmia genes." />
+		<meta name="author" content="Brett Kroncke" />
+		<meta name="theme-color" content="#8a4680" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/refresh.css" />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	</head>
 	<body class="subpage">
 
@@ -25,8 +30,8 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="ResearchProjects.html">Research Projects</a></li>
 						<li><a href="People.html">People</a></li>
-						<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B" target="_blank">Publications</a></li>
-                                                <li><a href="Resources.html">Resources</a></li>
+						<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank">Publications</a></li>
+						<li><a href="Resources.html">Resources</a></li>
 					</ul>
 				</nav>
 
@@ -46,40 +51,79 @@
 					<div class="box">
 						<div class="content">
 							<header class="align-center">
-								<h2>The Variant Browser <a href="https://variantbrowser.org" target="_blank">(link)</a></h2>
+								<p>Tools &amp; data</p>
+								<h2>The Variant Browser</h2>
 							</header>
-							A major resulting challenge facing contemporary genomic medicine is the clinical community’s desire for yes/no
-          						answers to the nuanced issue of whether a specific genetic variant will produce a meaningful phenotype.
-          						The current framework used to assess the significance of these variants classifies them from likely pathogenic/
-							  pathogenic to likely benign/benign, with most stuck as variant of uncertain significance. Here we present a
-							  data-driven estimate of disease penetrance along side raw data for interpreting variants in KCNQ1, KCNH2, and SCN5A.
-							  To estimate penetrance of disease, heuristically, we found that the innate diagnostic information one learns
-							  about a variant from three-dimensional variant location, <i>in vitro</i> functional data, and <i>in silico</i>
-							  predictors is equivalent to the diagnostic information one learns about that same variant by clinically
-							  phenotyping around 10-20 heterozygotes. These results are published in 2020 in
-						    <a href="https://pubmed.ncbi.nlm.nih.gov/32569262/">PLOS Genetics</a>, 2021 in <a href="https://pubmed.ncbi.nlm.nih.gov/34309407/">Circ. Gen</a>, and 2022 in <a href="https://pubmed.ncbi.nlm.nih.gov/36496179/">Genetics in Medicine</a>.
-						    We present the results from these analyses in the form of searchable tables.
-								<br>
+							<p>
+							A major challenge facing contemporary genomic medicine is the clinical community&rsquo;s desire for yes/no answers to the nuanced question of whether a specific genetic variant will produce a meaningful phenotype. Today&rsquo;s framework classifies variants from likely pathogenic / pathogenic to likely benign / benign, with most stuck as a <em>variant of uncertain significance</em>. At <a href="https://variantbrowser.org" target="_blank">VariantBrowser.org</a> we instead present a data-driven estimate of disease penetrance alongside the raw data, in searchable tables, for interpreting variants in <i>KCNQ1</i>, <i>KCNH2</i>, and <i>SCN5A</i>.
+							</p>
+							<div class="callout">
+								<p>Heuristically, the diagnostic information one learns about a variant from its three-dimensional location, <i>in vitro</i> functional data, and <i>in silico</i> predictors is roughly equivalent to clinically phenotyping <strong>10&ndash;20 heterozygotes</strong>. Published in <a href="https://pubmed.ncbi.nlm.nih.gov/32569262/" target="_blank">PLOS Genetics (2020)</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/34309407/" target="_blank">Circ. Genomic &amp; Precision Medicine (2021)</a>, and <a href="https://pubmed.ncbi.nlm.nih.gov/36496179/" target="_blank">Genetics in Medicine (2022)</a>.</p>
+							</div>
+
 							<header class="align-center">
-									<h2>A Bayesian method to estimate disease penetrance from genetic variant properties</h2>
-								</header>
-								<p>We leveraged our previously collected Na<sub>V</sub>1.5 (<i>SCN5A</i>) dataset, supplemented with variants published within the last year, to assess the ability of functional, structural, and sequence-based predictive features to estimate Brugada syndrome penetrance. Scripts and data can be found on GitHub
-								<a href="https://github.com/kroncke-lab/Bayes_BrS1_Penetrance" target="_blank">(link)</a></p>
-							<header class="align-center">
-									<h2>Predicting changes in Na<sub>V</sub>1.5 (<i>SCN5A</i>) and K<sub>V</sub>7.1 (<i>KCNQ1</i>) function </h2>
+								<h3>Open-source toolkit</h3>
 							</header>
-							<p>We leveraged our previously collected Na<sub>V</sub>1.5 (<i>SCN5A</i>) and K<sub>V</sub>7.1 (<i>KCNQ1</i>) datasets to assess the ability of structure- and sequence-based predictive features to predict changes in channel function. Scripts and data can be found on GitHub
-								<a href="https://github.com/kroncke-lab/Q1_5A_Structure_Function" target="_blank">(link)</a></p>
-								<br>
-							<header class="align-center">
-									<h2>Deep Mutational Scan of KCNH2</h2>
-							</header>
-								<p>We developed a method to assay the trafficking perturbation induced by missense variants in <i>KCNH2</i> in high-throughput, capable of collecting these data for 1,000s of variants at a time. Scripts and data used can be found on GitHub
-								<a href="https://github.com/kroncke-lab/KCNH2_DMS" target="_blank">(link)</a></p>
-								 </div>
+							<p style="text-align:center;">Our methods are released as reusable, documented code. Everything below is on <a href="https://github.com/kroncke-lab" target="_blank">GitHub</a>.</p>
+							<div class="lab-grid">
+
+								<div class="thrust tool">
+									<span class="repo">GeneVariantFetcher</span>
+									<p>LLM-driven discovery and extraction of per-variant carrier and phenotype evidence from the PubMed literature.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/GeneVariantFetcher" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">GenePhenExtract</span>
+									<p>LLM-powered structured extraction of gene, variant, and phenotype data from the published record.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/GenePhenExtract" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">variantFeatures</span>
+									<p>Aggregates AlphaMissense, REVEL, CADD, ClinVar, and gnomAD into one unified, queryable SQLite database.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/VariantFeatures" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">KCNH2_DMS</span>
+									<p>Deep mutational scanning of <i>KCNH2</i>/Kv11.1 trafficking &mdash; perturbation data for thousands of variants at once.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/KCNH2_DMS" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">Bayes_BrS1_Penetrance</span>
+									<p>Predicting Brugada syndrome penetrance from Na<sub>V</sub>1.5 (<i>SCN5A</i>) functional, structural, and sequence features.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/Bayes_BrS1_Penetrance" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">Q1_5A_Structure_Function</span>
+									<p>Predicting functional perturbation in K<sub>V</sub>7.1 (<i>KCNQ1</i>) and Na<sub>V</sub>1.5 (<i>SCN5A</i>) from structure and sequence.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/Q1_5A_Structure_Function" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">RyR2-disease-penetrance</span>
+									<p>Carrier data and disease-penetrance estimates for CPVT-associated <i>RyR2</i> variants.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/RyR2-disease-penetrance" target="_blank">View on GitHub</a></div>
+								</div>
+
+								<div class="thrust tool">
+									<span class="repo">LQTS-Penetrance-APC-MAVE</span>
+									<p>Patient- and variant-specific features for the risk of severe cardiac events in long QT syndrome.</p>
+									<div class="meta"><a href="https://github.com/kroncke-lab/LQTS-Penetrance-APC-MAVE-Events" target="_blank">View on GitHub</a></div>
+								</div>
+
+							</div>
+							<p style="text-align:center; color:var(--muted); font-size:.92rem; margin-top:1.6rem;">
+								Additional components &mdash; the Bayesian penetrance estimator, AlphaFold structural-proximity analysis, and the ClinGen gene&ndash;disease curation app &mdash; are in active development and available on request.
+							</p>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
+
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
@@ -97,6 +141,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/refresh.js"></script>
 
 	</body>
 </html>
