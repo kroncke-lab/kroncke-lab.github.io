@@ -50,6 +50,7 @@
 		".thrust",
 		".stat",
 		".callout",
+		".person",
 		".wrapper > .inner > header.align-center"
 	];
 	var targets = [];
@@ -70,6 +71,7 @@
 		var parent = el.parentNode;
 		if (parent && (parent.classList.contains("lab-grid") ||
 		               parent.classList.contains("stats") ||
+		               parent.classList.contains("people") ||
 		               parent.classList.contains("grid-style"))) {
 			var idx = Array.prototype.indexOf.call(parent.children, el);
 			if (idx > 0) el.style.transitionDelay = Math.min(idx * 90, 360) + "ms";
