@@ -13,6 +13,7 @@
 		<meta name="author" content="Brett Kroncke" />
 		<meta name="theme-color" content="#8a4680" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/refresh.css" />
 		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 	</head>
@@ -64,7 +65,7 @@
 			<div class="stat"><span class="n">1,400+</span><span class="l">SCN5A variants curated</span></div>
 			<div class="stat"><span class="n">5</span><span class="l">evidence sources unified</span></div>
 			<div class="stat"><span class="n">5&times;</span><span class="l">LLM consensus per curation</span></div>
-			<div class="stat"><span class="n">3</span><span class="l">genes live on VariantBrowser.org</span></div>
+			<div class="stat"><span class="n">4</span><span class="l">genes live on VariantBrowser.org</span></div>
 		</div>
 
 		<header class="align-center">
@@ -120,68 +121,106 @@
 		<strong>LLM-assisted literature and gene&ndash;disease curation.</strong>
 		Large language models extract variant, phenotype, and carrier evidence from the published record at scale, and a multi-model consensus reproduces ClinGen-style gene&ndash;disease validity classifications &mdash; turning months of manual curation into a reviewable, auditable workflow.
 		</li>
-		<li>
-		<strong>VariantBrowser.org.</strong>
-		We develop and maintain a widely used portal that distributes these resources to clinicians, genetic counselors, and researchers worldwide, ensuring that discoveries rapidly inform care.
-		</li>
 		</ul>
+		<header class="align-center">
+		<h3>VariantBrowser.org</h3>
+		</header>
+		<p>
+		We distribute these resources through <a href="https://variantbrowser.org" target="_blank">VariantBrowser.org</a>, a freely available portal used by clinicians, genetic counselors, and researchers worldwide. Each gene page unifies published carrier counts, <i>in&nbsp;vitro</i> functional data, structural context, and <i>in&nbsp;silico</i> predictors behind a calibrated, Bayesian estimate of disease probability. Four cardiac channelopathy genes are live today &mdash; together spanning more than 55,000 variants &mdash; with many more in active development.
+		</p>
+		<div class="gene-grid">
+			<div class="gene"><span class="sym">KCNQ1</span><span class="dis">Long QT syndrome type&nbsp;1</span><span class="ct">4,386 variants</span></div>
+			<div class="gene"><span class="sym">KCNH2</span><span class="dis">Long QT syndrome type&nbsp;2</span><span class="ct">7,995 variants</span></div>
+			<div class="gene"><span class="sym">SCN5A</span><span class="dis">Brugada syndrome / LQT3</span><span class="ct">13,739 variants</span></div>
+			<div class="gene"><span class="sym">RYR2</span><span class="dis">CPVT</span><span class="ct">29,236 variants</span></div>
+			<div class="gene soon"><span class="sym">+ many more</span><span class="dis">coming soon</span></div>
+		</div>
+		<p style="text-align:center; margin-top:1.7rem;">
+			<a href="https://variantbrowser.org" target="_blank" class="button alt">Explore VariantBrowser.org</a>
+		</p>
+
 		<header class="align-center">
 		<h3>Perturbation of ion channel function and relationship to disease</h3>
 		</header>
-		<div class="row 200%">
-		<div class="6u 12u$(medium)">
 		<p>
 		Current prediction algorithms struggle to incorporate the diverse genetic and environmental factors that shape penetrance. By curating more than 1,400 <i>SCN5A</i> variants&mdash;including 304 with functional data&mdash;we show that modest perturbations yield heterogeneous clinical presentations, whereas extreme loss or gain of function produces more consistent outcomes. Modeling the probability of disease from functional effects therefore offers a clearer path to clinical decision-making than binary classifications.
 		</p>
+		<figure class="figure dark">
+			<img src="images/maptostructurefreq.jpg" loading="lazy" alt="Disease-associated variants in Nav1.5 (SCN5A) mapped onto the channel structure, with per-residue rates of Brugada syndrome, type 3 long QT syndrome, and unaffected carriers." />
+			<figcaption>Disease-associated variants in Nav1.5 (<i>SCN5A</i>) mapped onto the channel structure. Per-residue rates of Brugada syndrome (BrS1, blue), type&nbsp;3 long QT syndrome (LQT3, red), and unaffected carriers (gold) cluster differently across membrane regions &mdash; structural context that sharpens our priors for uncharacterized variants.</figcaption>
+		</figure>
+		<div class="split">
+			<div>
+				<h5>Intravariant heterogeneity of clinical presentation</h5>
+				<p>Carriers of the same variant can present very differently. Peak current &mdash; a proxy for channel function &mdash; tracks with, but does not fully determine, how many carriers are diagnosed with Brugada syndrome (BrS1). Capturing that spread is exactly what our penetrance models are built to do.</p>
+			</div>
+			<div>
+				<table>
+				<thead>
+				<tr>
+				<th>Variant</th>
+				<th>Peak current&nbsp;[1]</th>
+				<th># unaffected&nbsp;[2]</th>
+				<th># BrS1&nbsp;[3]</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr><td>S1787N</td><td>95%</td><td>12</td><td>1</td></tr>
+				<tr><td>Y1795H</td><td>66%</td><td>7</td><td>5</td></tr>
+				<tr><td>R367H</td><td>0%</td><td>3</td><td>16</td></tr>
+				</tbody>
+				</table>
+				<p class="small">
+				[1] Proxy for channel function &nbsp;&middot;&nbsp; [2] Carriers without a clinical phenotype &nbsp;&middot;&nbsp; [3] Carriers diagnosed with BrS1
+				</p>
+			</div>
 		</div>
-		<div class="6u$ 12u$(medium)">
-		<h5>Table 1. Intravariant heterogeneity of clinical presentation</h5>
-		<table>
-		<thead>
-		<tr>
-		<th>Variant</th>
-		<th>Peak current&nbsp;[1]</th>
-		<th># unaffected&nbsp;[2]</th>
-		<th># BrS1&nbsp;[3]</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>S1787N</td>
-		<td>95%</td>
-		<td>12</td>
-		<td>1</td>
-		</tr>
-		<tr>
-		<td>Y1795H</td>
-		<td>66%</td>
-		<td>7</td>
-		<td>5</td>
-		</tr>
-		<tr>
-		<td>R367H</td>
-		<td>0%</td>
-		<td>3</td>
-		<td>16</td>
-		</tr>
-		</tbody>
-		</table>
-		<p class="small">
-		[1] Proxy for channel function<br />
-		[2] Carriers without a clinical phenotype<br />
-		[3] Carriers diagnosed with BrS1
-		</p>
-		</div>
-		</div>
+
 		<header class="align-center">
 		<h3>Predicting ion channel function</h3>
 		</header>
+		<div class="split middle">
+			<div>
+				<p>
+				Our work blends experimental and computational strategies to characterize variant effects at scale. We interrogate structural consequences with Rosetta modeling, molecular dynamics in AMBER, and NMR, and we generate functional measurements through deep mutational scanning and automated patch clamp platforms. These complementary approaches let us build predictive models that can be validated in disease-relevant systems.
+				</p>
+			</div>
+			<figure class="figure">
+				<img src="images/amber_model.png" loading="lazy" alt="All-atom molecular dynamics snapshot of an ion-channel segment embedded in an explicit lipid bilayer with surrounding water." />
+				<figcaption>All-atom molecular dynamics (AMBER) of a channel segment in an explicit lipid bilayer &mdash; one of the structural methods we use to connect sequence to function.</figcaption>
+			</figure>
+		</div>
+
+		<header class="align-center">
+		<h3>High-throughput variant characterization</h3>
+		</header>
 		<p>
-		Our work blends experimental and computational strategies to characterize variant effects at scale. We interrogate structural consequences with Rosetta modeling, molecular dynamics in AMBER, and NMR, and we generate functional measurements through deep mutational scanning and automated patch clamp platforms. These complementary approaches allow us to build predictive models that can be validated in disease-relevant systems.
+		Interpreting variants one at a time cannot keep pace with sequencing. We measure variant effects <em>at scale</em>, so that thousands of variants can be characterized functionally and fed directly into our penetrance models.
 		</p>
+		<div class="lab-grid">
+			<div class="thrust">
+				<span class="ico"><i class="fa fa-th" aria-hidden="true"></i></span>
+				<h4>Deep mutational scanning</h4>
+				<p>We built the most comprehensive variant-effect map to date for <i>KCNH2</i>/Kv11.1, quantifying cell-surface trafficking for thousands of variants in a single multiplexed experiment.</p>
+			</div>
+			<div class="thrust">
+				<span class="ico"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+				<h4>Automated patch clamp</h4>
+				<p>Scalable, high-throughput electrophysiology measures the biophysical consequences of variants &mdash; peak current, gating, and kinetics &mdash; far faster than manual recording.</p>
+			</div>
+			<div class="thrust">
+				<span class="ico"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+				<h4>iPSC-cardiomyocytes</h4>
+				<p>CRISPR-edited stem-cell cardiomyocytes with defined genetic backgrounds test how common, polygenic variation reshapes the expressivity of rare, large-effect variants.</p>
+			</div>
+		</div>
 		<p>
-		Polygenic risk scores modify disease susceptibility. By engineering induced pluripotent stem cell cardiomyocytes with defined genetic backgrounds, we test how common alleles modulate the expressivity of rare, large-effect variants. In recent work (2026), we used quantitative proteomics to show how elevated QT polygenic risk reshapes Kv11.1 (hERG) trafficking networks in these cardiomyocytes &mdash; connecting common-variant background to a concrete molecular mechanism. These CRISPR-edited model systems let us explore nonlinear interactions that influence arrhythmia risk and treatment response.
+		Polygenic risk scores modify disease susceptibility. By engineering iPSC-cardiomyocytes with defined genetic backgrounds, we test how common alleles modulate the expressivity of rare, large-effect variants. In recent work (2026), we used quantitative proteomics to show how elevated QT polygenic risk reshapes Kv11.1 (hERG) trafficking networks in these cardiomyocytes &mdash; connecting common-variant background to a concrete molecular mechanism and revealing nonlinear interactions that influence arrhythmia risk and treatment response.
 		</p>
+		<figure class="figure">
+			<video onloadedmetadata="this.muted=true" autoplay loop muted playsinline src="images/hipsc-cms2.mp4"></video>
+			<figcaption>Beating human iPSC-derived cardiomyocytes &mdash; a patient-relevant model for testing how genetic background shapes channel function and arrhythmia risk.</figcaption>
+		</figure>
 
 		<header class="align-center">
 		<h3>Extending to atrial fibrillation</h3>

@@ -401,6 +401,74 @@ table tbody tr:nth-child(2n) { background-color: var(--brand-50); }
 }
 .callout p:last-child { margin-bottom: 0; }
 
+/* ----------------------------------------------- Figures & media frames */
+
+.figure {
+	margin: 2.2rem 0 0;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	overflow: hidden;
+	background: var(--bg);
+}
+.figure img,
+.figure video {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.figure figcaption {
+	padding: 0.85rem 1.2rem;
+	font-size: 0.83rem;
+	line-height: 1.55;
+	color: var(--muted);
+	text-align: left;
+	border-top: 1px solid var(--line);
+}
+/* dark frame for figures rendered on a black background */
+.figure.dark { background: #0b0710; border-color: rgba(255, 255, 255, 0.08); }
+.figure.dark figcaption { color: rgba(255, 255, 255, 0.66); border-top-color: rgba(255, 255, 255, 0.08); }
+
+/* responsive media + text pairing — replaces the legacy skel row/Nu grid */
+.split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: start;
+	margin: 2.2rem 0 0;
+	text-align: left;
+}
+.split.middle { align-items: center; }
+.split > * { min-width: 0; }
+.split .figure { margin: 0; }
+.split h5 { margin-top: 0; }
+.split table { margin-bottom: 0.8rem; }
+@media screen and (max-width: 820px) {
+	.split { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+/* gene chips for the VariantBrowser line-up */
+.gene-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 1rem;
+	margin: 2rem 0 0;
+	text-align: left;
+}
+.gene {
+	border: 1px solid rgba(138, 70, 128, 0.18);
+	border-radius: var(--radius);
+	background: var(--brand-50);
+	padding: 1.1rem 1.2rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gene:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.gene .sym { display: block; font-weight: 700; font-size: 1.15rem; color: var(--brand-700); font-style: italic; }
+.gene .dis { display: block; font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.15rem; }
+.gene .ct  { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.35rem; }
+.gene.soon { background: var(--bg); border-style: dashed; display: grid; place-items: center; text-align: center; }
+.gene.soon .sym { font-style: normal; color: var(--brand); }
+
 /* --------------------------------------------------------------- People */
 
 .people {
