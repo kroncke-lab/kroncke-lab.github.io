@@ -1,260 +1,398 @@
-<!DOCTYPE HTML>
-<!--
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Kroncke Laboratory — Translational Cardiogenetics, Vanderbilt</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="The Kroncke Lab at Vanderbilt University Medical Center quantifies what genetic variants mean for the people who carry them — pairing high-throughput functional genomics, iPSC-derived cardiomyocytes, protein structure, LLM-assisted literature curation, and Bayesian modeling to estimate disease penetrance in cardiac arrhythmia genes." />
-		<meta name="author" content="Brett Kroncke" />
-		<meta name="theme-color" content="#8a4680" />
-		<meta property="og:title" content="Kroncke Laboratory — Translational Cardiogenetics" />
-		<meta property="og:description" content="Estimating the significance of genetic variants — from binary labels to calibrated, individualized penetrance." />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="images/maptostructurefreq.jpg" />
-		<meta property="og:url" content="https://kroncke-lab.github.io/" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/css/refresh.css" />
-		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-	</head>
-	<body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kroncke Laboratory — Translational Cardiogenetics, Vanderbilt</title>
+<meta name="description" content="The Kroncke Lab at Vanderbilt University Medical Center quantifies what genetic variants mean for the people who carry them through functional genomics, protein structure, LLM-assisted literature curation, and Bayesian penetrance modeling.">
+<meta name="author" content="Brett Kroncke">
+<meta name="theme-color" content="#bd8329">
+<meta property="og:title" content="Kroncke Laboratory — Translational Cardiogenetics">
+<meta property="og:description" content="Estimating the significance of genetic variants from binary labels to calibrated, individualized penetrance.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="site/images/maptostructurefreq.jpg">
+<meta property="og:url" content="https://kroncke-lab.github.io/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#faf7f0;}
+  a{text-decoration:none;color:inherit;}
+  .kl-root{
+    --bg:#faf7f0; --bg-alt:#f3ede1; --bg-deep:#ece4d5;
+    --surface:#ffffff; --surface-hover:#fffaf0;
+    --text-strong:#221c14; --text-body:#4d463b; --text-muted:#6a6256; --text-faint:#8c8475;
+    --line:rgba(40,31,16,.12); --chip-line:rgba(40,31,16,.20);
+    --accent:#bd8329; --accent-bright:#d2a24c; --accent-line:rgba(189,131,41,.33); --accent-glow:rgba(189,131,41,.12);
+    --mat:#0a0d0b;
+  }
+  .kl-root[data-mood="dusk"]{
+    --bg:#1a1410; --bg-alt:#1f1813; --bg-deep:#140f0b;
+    --surface:#241c15; --surface-hover:#2c2219;
+    --text-strong:#f6efe2; --text-body:#cec4b3; --text-muted:#b2a896; --text-faint:#968c7b;
+    --line:rgba(240,228,210,.12); --chip-line:rgba(240,228,210,.16);
+    --mat:#0f0b08;
+  }
+  .kl-root[data-mood="midnight"]{
+    --bg:#0b0e0c; --bg-alt:#0e1210; --bg-deep:#070907;
+    --surface:#11150f; --surface-hover:#161b14;
+    --text-strong:#f4f1e8; --text-body:#bdb9ae; --text-muted:#a8a499; --text-faint:#9a978c;
+    --line:rgba(236,232,223,.12); --chip-line:rgba(236,232,223,.16);
+    --mat:#070907;
+  }
+  @keyframes kl-zoom{from{transform:scale(1.08);}to{transform:scale(1.0);}}
+  @keyframes kl-scroll{0%{transform:translateY(0);opacity:.9;}60%{transform:translateY(8px);opacity:.3;}100%{transform:translateY(0);opacity:.9;}}
+  [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  [data-reveal].kl-in{opacity:1;transform:none;}
+  .kl-pin{opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease;}
+  .kl-in .kl-pin{opacity:1;transform:none;}
+  .kl-card{transition:transform .28s ease, border-color .28s ease, background .28s ease;}
+  .kl-card:hover{transform:translateY(-6px);border-color:var(--accent)!important;background:var(--surface-hover)!important;}
+  .kl-btn{transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;}
+  .kl-btn:hover{transform:translateY(-2px);filter:brightness(1.05);}
+  .kl-link{transition:color .18s ease;}
+  .kl-link:hover{color:var(--accent-bright)!important;}
+  .kl-nav a{transition:color .18s ease;}
+  .kl-nav a:hover{color:var(--accent-bright)!important;}
+  @media (max-width:980px){
+    .kl-2col{grid-template-columns:1fr!important;}
+    .kl-3col{grid-template-columns:1fr!important;}
+    .kl-4col{grid-template-columns:1fr 1fr!important;}
+    .kl-h1{font-size:40px!important;}
+    .kl-nav{display:none!important;}
+    .kl-pad{padding-left:24px!important;padding-right:24px!important;}
+  }
+  @media (max-width:620px){
+    .kl-4col{grid-template-columns:1fr!important;}
+    footer .kl-pad{grid-template-columns:1fr!important;}
+    footer a{overflow-wrap:anywhere;}
+  }
+  @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;}}
+</style>
+</helmet>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">Kroncke Laboratory</a></div>
-				<a href="#menu">Menu</a>
-			</header>
+<div class="kl-root" data-mood="dawn" data-root style="background:var(--bg); color:var(--text-strong); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="ResearchProjects.html">Research Projects</a></li>
-					<li><a href="People.html">People</a></li>
-					<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank">Publications</a></li>
-                                    <li><a href="Resources.html">Resources</a></li>
-				</ul>
-			</nav>
+  <!-- ===== Header ===== -->
+  <header id="kl-header" style="position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 44px; transition:background .3s ease, padding .3s ease, border-color .3s ease, color .3s ease; border-bottom:1px solid transparent; background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,0));">
+    <a href="index.html" data-logo style="font-family:'Spectral',serif; font-size:21px; font-weight:500; letter-spacing:.01em; color:#f7f4ec;">Kroncke Laboratory</a>
+    <nav class="kl-nav" style="display:flex; gap:32px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.05em; color:#e2ddd2;">
+      <a href="ResearchProjects.html" data-navlink>Research</a>
+      <a href="People.html" data-navlink>People</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank" data-navlink>Publications</a>
+      <a href="Resources.html" data-navlink>Resources</a>
+      <a href="OpenPositions.html" style="color:var(--accent-bright);">Join</a>
+    </nav>
+  </header>
 
-		<!-- Banner -->
-			<section class="banner full">
-				<article>
-					<img src="images/kcne3.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>What is the significance of genetic variants to those that carry them?</p>
-							<h2>Kroncke Laboratory</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/maptostructurefreq.jpg"  alt="" />
-					<div class="inner">
-						<header>
-							<p>Can protein structure inform the significance of genetic variants?</p>
-							<h2>Kroncke Laboratory</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="images/kcnq1+kcne3adj.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>What degree of functional perturbation is tolerated and how much is too much?</p>
-							<h2>Kroncke Laboratory</h2>
-						</header>
-					</div>
-				</article>
-			</section>
+  <!-- ===== Hero ===== -->
+  <section style="position:relative; height:100vh; min-height:680px; max-height:920px; overflow:hidden; background:var(--mat);">
+    <img id="kl-hero-img" src="site/images/kcnq1+kcne3adj.jpg" alt="" style="position:absolute; inset:0; width:100%; height:118%; object-fit:cover; opacity:1; animation:kl-zoom 14s ease-out forwards; will-change:transform;">
+    <div id="kl-hero-overlay" style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(20,13,7,.78) 0%, rgba(20,13,7,.42) 46%, rgba(20,13,7,.05) 100%);"></div>
+    <div id="kl-hero-fade" style="position:absolute; inset:0; background:linear-gradient(to top, var(--bg) 0%, rgba(0,0,0,0) 42%);"></div>
+    <div class="kl-pad" style="position:relative; z-index:2; height:100%; max-width:1180px; margin:0 auto; padding:0 44px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="max-width:790px;">
+        <div data-reveal style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--accent-bright); margin-bottom:26px; display:flex; align-items:center; gap:14px;"><span style="width:34px; height:1px; background:var(--accent-bright);"></span>Translational Cardiogenetics · Vanderbilt</div>
+        <h1 class="kl-h1" data-reveal style="font-family:'Spectral',serif; font-weight:400; font-size:62px; line-height:1.07; letter-spacing:-.012em; margin:0; color:#fbf7ee; transition-delay:.08s;">What does a genetic variant <span style="font-style:italic; color:var(--accent-bright);">actually mean</span> for the person who carries it?</h1>
+        <p data-reveal style="font-size:18px; line-height:1.7; color:#ece6da; margin:28px 0 0; max-width:560px; transition-delay:.16s;">We move past binary “pathogenic / benign” labels to give each carrier a calibrated probability of a clinically meaningful outcome — pairing high-throughput biology, protein structure, and Bayesian modeling.</p>
+        <div data-reveal style="display:flex; flex-wrap:wrap; gap:16px; margin-top:38px; transition-delay:.24s;">
+          <a href="ResearchProjects.html" class="kl-btn" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.04em; background:var(--accent); color:#fff; padding:14px 26px; border-radius:2px; font-weight:500; box-shadow:0 14px 34px -14px rgba(0,0,0,.7);">Explore the research →</a>
+          <a href="https://variantbrowser.org" target="_blank" class="kl-btn" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.04em; border:1px solid rgba(255,255,255,.34); color:#fff; padding:14px 26px; border-radius:2px;">VariantBrowser.org</a>
+        </div>
+      </div>
+    </div>
+    <div style="position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:2; font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-faint); display:flex; flex-direction:column; align-items:center; gap:8px;">Scroll<span style="font-size:14px; animation:kl-scroll 1.8s ease-in-out infinite;">↓</span></div>
+  </section>
 
-		<!-- One -->
-			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
+  <!-- ===== Beyond the label ===== -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:88px 44px 36px;">
+    <div data-reveal style="text-align:center; max-width:780px; margin:0 auto 50px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;">Beyond the label</div>
+      <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:34px; line-height:1.22; margin:0; color:var(--text-strong);">A variant is rarely simply benign or pathogenic. We estimate the <span style="font-style:italic; color:var(--accent);">probability</span> it leads to a concerning clinical outcome.</h2>
+    </div>
 
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img	src="images/TOC.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>How do we determine the significance of genetic variants?</p>
-										<h2>Research Program</h2>
-									</header>
-                                                                        <p>
-                                                                                We are driven to understand how genetics shapes an individual's risk for disease or adverse outcomes. The Kroncke Lab pairs high-throughput functional assays, CRISPR-edited stem-cell models, protein structure, and Bayesian statistical modeling to estimate how genetic variants influence disease penetrance &mdash; replacing binary &ldquo;pathogenic / benign&rdquo; labels with calibrated, individualized risk. We build an open-source pipeline that mines the literature with large language models, aggregates predictive features, and folds in 3D structural priors to clarify variants of uncertain significance in cardiac arrhythmia genes such as <i>KCNH2</i> and <i>SCN5A</i> &mdash; and we are now extending the same framework to atrial fibrillation.
-                                                                        </p>
-                                                                        <p>
-                                                                                See <a href="https://youtu.be/6k8YMC7NAzE" target="_blank">this talk</a> on YouTube for an overview of our research program.
-                                                                        </p>
-									<footer class="align-center">
-										<a href="ResearchProjects.html" class="button alt">Learn More</a>
-									</footer>
-								</div>
-							</div>
-						</div>
+    <div data-reveal style="max-width:880px; margin:0 auto;">
+      <!-- old categorical labels, being left behind -->
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:14px;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint); border:1px dashed var(--chip-line); border-radius:999px; padding:6px 13px; text-decoration:line-through; text-decoration-color:var(--accent-line);">Benign</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint); border:1px dashed var(--chip-line); border-radius:999px; padding:6px 13px; text-decoration:line-through; text-decoration-color:var(--accent-line);">Likely benign</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint); border:1px dashed var(--chip-line); border-radius:999px; padding:6px 13px; text-decoration:line-through; text-decoration-color:var(--accent-line);">Variant of uncertain significance</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint); border:1px dashed var(--chip-line); border-radius:999px; padding:6px 13px; text-decoration:line-through; text-decoration-color:var(--accent-line);">Likely pathogenic</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint); border:1px dashed var(--chip-line); border-radius:999px; padding:6px 13px; text-decoration:line-through; text-decoration-color:var(--accent-line);">Pathogenic</span>
+      </div>
+      <div style="text-align:center; font-size:13px; color:var(--text-muted); margin-bottom:30px;">The five-tier classification leaves most variants stranded in the middle as “uncertain.”</div>
 
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<video autoplay loop muted src="images/Kroncke_talk_145.mp4" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>What is our progress to date?</p>
-										<h2>Publications</h2>
-									</header>
-                                                                        <p>
-                                                                                Above is a video highlighting an intersection of protein structure and clinical presentation, in this case for the sodium ion channel Nav1.5 (gene <i>SCN5A</i>). Variants associated with Brugada syndrome (BrS1, blue), type 3 long QT syndrome (LQT3, red), or unaffected carriers (gold) are shown as spheres. This representation suggests the utility of using structure and residue annotation to understand mechanism and generate predictions about yet uncharacterized variants found in structured regions.
-                                                                        </p>
-                                                                        <p>
-                                                                                Recent work spans the most comprehensive variant-effect map to date for <i>KCNH2</i>/Kv11.1 by deep mutational scanning, quantitative proteomics of Kv11.1 trafficking under elevated QT polygenic risk in iPSC-cardiomyocytes (2026), and survival modeling of breakthrough cardiac events in <i>KCNH2</i> carriers on beta-blockers. Our patented <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) and the <a href="https://variantbrowser.org" target="_blank">VariantBrowser.org</a> portal translate these insights into tools clinicians and researchers rely on.
-                                                                        </p>
-									<footer class="align-center">
-										<a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank" class="button alt">Publication List</a>
-									</footer>
-								</div>
-							</div>
-						</div>
+      <!-- continuous probability axis -->
+      <div style="position:relative; padding-top:62px; padding-bottom:6px;">
+        <!-- pins -->
+        <div class="kl-pin" style="position:absolute; top:0; left:9%; transform:translateX(-50%); text-align:center; transition-delay:.15s;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-strong); background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:5px 9px; white-space:nowrap; box-shadow:0 4px 14px -8px rgba(0,0,0,.4);"><span style="font-style:italic;">S1787N</span> · <b style="color:#4f9d6b;">8%</b></div>
+          <div style="width:1px; height:14px; background:var(--text-faint); margin:4px auto 0;"></div>
+        </div>
+        <div class="kl-pin" style="position:absolute; top:0; left:44%; transform:translateX(-50%); text-align:center; transition-delay:.3s;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-strong); background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:5px 9px; white-space:nowrap; box-shadow:0 4px 14px -8px rgba(0,0,0,.4);"><span style="font-style:italic;">Y1795H</span> · <b style="color:#c9952f;">41%</b></div>
+          <div style="width:1px; height:14px; background:var(--text-faint); margin:4px auto 0;"></div>
+        </div>
+        <div class="kl-pin" style="position:absolute; top:0; left:89%; transform:translateX(-50%); text-align:center; transition-delay:.45s;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-strong); background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:5px 9px; white-space:nowrap; box-shadow:0 4px 14px -8px rgba(0,0,0,.4);"><span style="font-style:italic;">R367H</span> · <b style="color:#c1556f;">89%</b></div>
+          <div style="width:1px; height:14px; background:var(--text-faint); margin:4px auto 0;"></div>
+        </div>
+        <!-- the bar -->
+        <div style="position:relative; height:18px; border-radius:10px; background:linear-gradient(90deg,#4f9d6b 0%, #8fae5e 30%, #d6b24e 55%, #c98a56 78%, #c1556f 100%); box-shadow:inset 0 1px 3px rgba(0,0,0,.28);">
+          <div class="kl-pin" style="position:absolute; top:-4px; left:9%; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid #4f9d6b; transform:translateX(-50%); transition-delay:.15s; box-shadow:0 2px 8px rgba(0,0,0,.35);"></div>
+          <div class="kl-pin" style="position:absolute; top:-4px; left:44%; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid #c9952f; transform:translateX(-50%); transition-delay:.3s; box-shadow:0 2px 8px rgba(0,0,0,.35);"></div>
+          <div class="kl-pin" style="position:absolute; top:-4px; left:89%; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid #c1556f; transform:translateX(-50%); transition-delay:.45s; box-shadow:0 2px 8px rgba(0,0,0,.35);"></div>
+        </div>
+        <!-- ends -->
+        <div style="display:flex; justify-content:space-between; margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase;">
+          <span style="color:var(--text-muted);">0% &nbsp;·&nbsp; lower probability of disease</span>
+          <span style="color:var(--text-muted);">higher probability of disease &nbsp;·&nbsp; 100%</span>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:14.5px; line-height:1.7; color:var(--text-muted); margin:26px auto 0; max-width:620px;">Each variant gets a calibrated, individualized estimate — far more actionable for a clinician or a family than a single categorical label.</p>
+    </div>
+  </section>
 
-					</div>
-				</div>
-			</section>
+  <!-- ===== Research program + figure + stats ===== -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:60px 44px;">
+    <div class="kl-2col" data-reveal style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:20px;">The Research Program</div>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:36px; line-height:1.18; margin:0 0 22px; color:var(--text-strong);">From a binary label to a calibrated probability.</h2>
+        <p style="font-size:16.5px; line-height:1.8; color:var(--text-body); margin:0 0 18px;">An open-source pipeline mines the literature with large language models, unifies AlphaMissense, REVEL, CADD, ClinVar and gnomAD, folds in 3D structural priors, and returns penetrance with explicit uncertainty — for cardiac arrhythmia genes like <span style="font-style:italic; color:var(--accent);">KCNH2</span> and <span style="font-style:italic; color:var(--accent);">SCN5A</span>.</p>
+        <a href="ResearchProjects.html" class="kl-link" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.04em; color:var(--accent); border-bottom:1px solid var(--accent-line); padding-bottom:3px;">Read our approach →</a>
+      </div>
+      <figure style="margin:0; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--surface);">
+        <img src="site/images/maptostructurefreq.jpg" alt="Disease-associated variants in Nav1.5 mapped onto structure" style="width:100%; display:block;">
+        <figcaption style="padding:16px 20px; font-size:12.5px; color:var(--text-faint); line-height:1.55; border-top:1px solid var(--line); font-family:'IBM Plex Mono',monospace; letter-spacing:.02em;">Variants in Nav1.5 (SCN5A) mapped onto structure — BrS1 <span style="color:#6f9bd8;">●</span> · LQT3 <span style="color:#c1556f;">●</span> · unaffected <span style="color:var(--accent);">●</span></figcaption>
+      </figure>
+    </div>
+    <div class="kl-4col" data-reveal style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:56px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <div style="padding:32px 28px 32px 0;"><div style="font-family:'Spectral',serif; font-size:42px; color:var(--accent); line-height:1;">55,000+</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-top:12px;">Variants mapped</div></div>
+      <div style="padding:32px 28px; border-left:1px solid var(--line);"><div style="font-family:'Spectral',serif; font-size:42px; color:var(--accent); line-height:1;">4</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-top:12px;">Genes live</div></div>
+      <div style="padding:32px 28px; border-left:1px solid var(--line);"><div style="font-family:'Spectral',serif; font-size:42px; color:var(--accent); line-height:1;">1,400+</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-top:12px;">SCN5A curated</div></div>
+      <div style="padding:32px 0 32px 28px; border-left:1px solid var(--line);"><div style="font-family:'Spectral',serif; font-size:42px; color:var(--accent); line-height:1;">1</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-top:12px;">Patented method</div></div>
+    </div>
+  </section>
 
-		<!-- Three -->
-			<section id="three" class="wrapper style3">
-                                <div class="inner">
-                                        <header class="align-center">
-                                                <p>Integrating genetics, quantitative models, and high-throughput biology</p>
-                                                <h2>Translational Genomics</h2>
-                                                <a href="ResearchProjects.html" class="button alt">Our Approach</a>
-                                        </header>
-                                </div>
-			</section>
+  <!-- ===== Pipeline ===== -->
+  <section style="background:var(--bg-alt); border-top:1px solid var(--line);">
+    <div class="kl-pad" style="max-width:1180px; margin:0 auto; padding:80px 44px;">
+      <div data-reveal style="margin-bottom:40px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;">How the pipeline works</div>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:34px; line-height:1.2; margin:0; color:var(--text-strong); max-width:640px;">Four steps from the published record to a calibrated risk estimate.</h2>
+      </div>
+      <div class="kl-4col" data-reveal style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+        <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 26px; background:var(--surface);"><div style="font-family:'Spectral',serif; font-size:14px; color:var(--accent); letter-spacing:.1em;">01</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin:14px 0 10px; color:var(--text-strong);">Curate</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">LLM agents pull per-variant carrier counts, phenotypes and study context from PubMed; a multi-model consensus scores gene–disease validity against the ClinGen SOP.</p></div>
+        <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 26px; background:var(--surface);"><div style="font-family:'Spectral',serif; font-size:14px; color:var(--accent); letter-spacing:.1em;">02</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin:14px 0 10px; color:var(--text-strong);">Annotate</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">AlphaMissense, REVEL, CADD, ClinVar and gnomAD are unified into one queryable resource, so every variant carries the same panel of evidence.</p></div>
+        <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 26px; background:var(--surface);"><div style="font-family:'Spectral',serif; font-size:14px; color:var(--accent); letter-spacing:.1em;">03</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin:14px 0 10px; color:var(--text-strong);">Localize</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">Variants are mapped onto AlphaFold structures with elastic-network analysis, so pathogenic clusters raise the prior for nearby variants of uncertain significance.</p></div>
+        <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 26px; background:var(--surface);"><div style="font-family:'Spectral',serif; font-size:14px; color:var(--accent); letter-spacing:.1em;">04</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:21px; margin:14px 0 10px; color:var(--text-strong);">Estimate</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">A Bayesian model fuses carriers, predictive features and structural priors into penetrance estimates with full uncertainty — our patented framework.</p></div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Focus -->
-			<section id="focus" class="wrapper style2">
-				<div class="inner">
-					<header class="align-center">
-						<p>What we are working on now</p>
-						<h2>Current Focus</h2>
-					</header>
-					<div class="lab-grid">
+  <!-- ===== Current focus ===== -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:80px 44px;">
+    <div data-reveal style="margin-bottom:40px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;">Current focus</div>
+      <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:34px; line-height:1.2; margin:0; color:var(--text-strong);">What we are working on now.</h2>
+    </div>
+    <div class="kl-3col" data-reveal style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">⌕  Evidence</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">LLM-assisted curation</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">Pipelines mine PubMed for variant, phenotype and carrier evidence, then a multi-model consensus scores gene–disease validity.</p></div>
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">▦  Data</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">Multi-source features</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">AlphaMissense, REVEL, CADD, ClinVar and gnomAD unified into one resource, so every variant carries the same evidence.</p></div>
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">◳  Structure</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">Structure-aware priors</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">AlphaFold models place variants in 3D, letting pathogenic neighborhoods inform priors for nearby VUS.</p></div>
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">∿  Modeling</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">Bayesian penetrance</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">A probabilistic model fuses carrier counts, features and structural priors into penetrance with full uncertainty.</p></div>
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">⚗  Function</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">High-throughput function</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">Deep mutational scanning and automated patch clamp measure variant effects at scale — including the fullest KCNH2 map to date.</p></div>
+      <div class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:30px 28px; background:var(--surface);"><div style="font-size:13px; color:var(--accent); font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; margin-bottom:14px;">♥  Models</div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:20px; margin:0 0 9px; color:var(--text-strong);">Stem-cell &amp; clinical</h4><p style="font-size:14.5px; line-height:1.65; color:var(--text-muted); margin:0;">CRISPR-edited iPSC-cardiomyocytes test how polygenic background shifts expressivity; survival models flag breakthrough events.</p></div>
+    </div>
+    <div data-reveal style="display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; justify-content:center;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">Long QT syndrome</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">Brugada syndrome</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">Atrial fibrillation</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">KCNH2</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">SCN5A</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">KCNQ1</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">RyR2</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">AlphaFold</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">PyMC</span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--text-muted); border:1px solid var(--chip-line); border-radius:999px; padding:7px 15px;">iPSC-CMs</span>
+    </div>
+  </section>
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-search" aria-hidden="true"></i></span>
-							<h4>LLM-assisted evidence curation</h4>
-							<p>Large-language-model pipelines mine PubMed for variant, phenotype, and carrier evidence, then a multi-model consensus scores gene&ndash;disease validity against the ClinGen SOP.</p>
-						</div>
+  <!-- ===== VariantBrowser feature ===== -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:30px 44px 80px;">
+    <div data-reveal style="position:relative; border:1px solid var(--accent-line); border-radius:4px; overflow:hidden; background:radial-gradient(120% 140% at 85% 0%, var(--accent-glow) 0%, rgba(0,0,0,0) 55%), var(--bg-alt);">
+      <div class="kl-pad" style="padding:54px 48px;">
+        <div class="kl-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;">The public resource</div>
+            <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:34px; line-height:1.18; margin:0 0 18px; color:var(--text-strong);">VariantBrowser.org</h2>
+            <p style="font-size:16px; line-height:1.78; color:var(--text-body); margin:0 0 26px;">A freely available portal used by clinicians, genetic counselors and researchers worldwide. Each gene page unifies carrier counts, functional data, structural context and <em style="font-style:italic; color:var(--accent);">in silico</em> predictors behind a calibrated Bayesian estimate of disease probability.</p>
+            <a href="https://variantbrowser.org" target="_blank" class="kl-btn" style="display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.04em; background:var(--accent); color:#fff; padding:13px 24px; border-radius:2px; font-weight:500;">Explore the browser →</a>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div style="border:1px solid var(--line); border-radius:3px; padding:20px; background:var(--surface);"><span style="display:block; font-family:'Spectral',serif; font-style:italic; font-weight:500; font-size:20px; color:var(--accent);">KCNQ1</span><span style="display:block; font-size:12.5px; color:var(--text-muted); margin-top:5px;">Long QT type 1</span><span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-faint); margin-top:8px;">4,386 variants</span></div>
+            <div style="border:1px solid var(--line); border-radius:3px; padding:20px; background:var(--surface);"><span style="display:block; font-family:'Spectral',serif; font-style:italic; font-weight:500; font-size:20px; color:var(--accent);">KCNH2</span><span style="display:block; font-size:12.5px; color:var(--text-muted); margin-top:5px;">Long QT type 2</span><span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-faint); margin-top:8px;">7,995 variants</span></div>
+            <div style="border:1px solid var(--line); border-radius:3px; padding:20px; background:var(--surface);"><span style="display:block; font-family:'Spectral',serif; font-style:italic; font-weight:500; font-size:20px; color:var(--accent);">SCN5A</span><span style="display:block; font-size:12.5px; color:var(--text-muted); margin-top:5px;">Brugada / LQT3</span><span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-faint); margin-top:8px;">13,739 variants</span></div>
+            <div style="border:1px solid var(--line); border-radius:3px; padding:20px; background:var(--surface);"><span style="display:block; font-family:'Spectral',serif; font-style:italic; font-weight:500; font-size:20px; color:var(--accent);">RYR2</span><span style="display:block; font-size:12.5px; color:var(--text-muted); margin-top:5px;">CPVT</span><span style="display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-faint); margin-top:8px;">29,236 variants</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-database" aria-hidden="true"></i></span>
-							<h4>Multi-source variant features</h4>
-							<p>We unify AlphaMissense, REVEL, CADD, ClinVar, and gnomAD into one queryable resource, so every variant carries the same panel of evidence.</p>
-						</div>
+  <!-- ===== People + Resources teaser ===== -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:0 44px 90px;">
+    <div class="kl-2col" data-reveal style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <a href="People.html" class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:38px 36px; background:var(--surface); display:block;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">Who does this work</div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:26px; margin:0 0 10px; color:var(--text-strong);">People</h3>
+        <p style="font-size:15px; line-height:1.7; color:var(--text-muted); margin:0 0 18px;">A multidisciplinary team — wet-lab, computation and clinic — led by Brett Kroncke, Ph.D.</p>
+        <span class="kl-link" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--accent);">Meet the lab →</span>
+      </a>
+      <a href="Resources.html" class="kl-card" style="border:1px solid var(--line); border-radius:3px; padding:38px 36px; background:var(--surface); display:block;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">Tools &amp; data</div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:26px; margin:0 0 10px; color:var(--text-strong);">Resources</h3>
+        <p style="font-size:15px; line-height:1.7; color:var(--text-muted); margin:0 0 18px;">An open-source toolkit on GitHub — curation, feature aggregation, and penetrance code.</p>
+        <span class="kl-link" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--accent);">Browse the toolkit →</span>
+      </a>
+    </div>
+  </section>
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-cubes" aria-hidden="true"></i></span>
-							<h4>Structure-aware priors</h4>
-							<p>AlphaFold models and elastic-network analysis place variants in 3D, letting pathogenic neighborhoods inform priors for nearby variants of uncertain significance.</p>
-						</div>
+  <!-- ===== Footer ===== -->
+  <footer style="border-top:1px solid var(--line); background:var(--bg-deep);">
+    <div class="kl-pad" style="max-width:1180px; margin:0 auto; padding:60px 44px 44px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Spectral',serif; font-size:21px; font-weight:500; color:var(--text-strong); margin-bottom:14px;">Kroncke Laboratory</div>
+        <p style="font-size:13.5px; line-height:1.7; color:var(--text-faint); margin:0; font-family:'IBM Plex Mono',monospace; letter-spacing:.01em;">Vanderbilt University Medical Center<br>Vanderbilt Center for Arrhythmia Research<br>and Therapeutics (VanCART)<br>1225E MRBIV · 2215B Garland Ave.<br>Nashville, TN 37232</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">Navigate</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:var(--text-body);">
+          <a href="ResearchProjects.html" class="kl-link">Research Projects</a>
+          <a href="People.html" class="kl-link">People</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank" class="kl-link">Publications</a>
+          <a href="Resources.html" class="kl-link">Resources</a>
+          <a href="OpenPositions.html" class="kl-link">Join the lab</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">Contact</div>
+        <a href="mailto:brett.kroncke@gmail.com" class="kl-link" style="font-size:14px; color:var(--text-body);">brett.kroncke@gmail.com</a>
+        <div style="margin-top:18px;"><a href="https://github.com/kroncke-lab" target="_blank" class="kl-link" style="font-size:14px; color:var(--text-body);">github.com/kroncke-lab</a></div>
+      </div>
+    </div>
+    <div class="kl-pad" style="max-width:1180px; margin:0 auto; padding:18px 44px 40px; border-top:1px solid var(--line); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:var(--text-faint);">© 2026 Kroncke Laboratory · Vanderbilt University Medical Center</div>
+  </footer>
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
-							<h4>Bayesian penetrance</h4>
-							<p>A probabilistic model fuses carrier counts, predictive features, and structural priors into penetrance estimates with full uncertainty &mdash; our patented framework.</p>
-						</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1180, &quot;height&quot;: 860 },
+  &quot;mood&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Dawn&quot;, &quot;Dusk&quot;, &quot;Midnight&quot;], &quot;default&quot;: &quot;Dawn&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;options&quot;: [[&quot;#bd8329&quot;, &quot;#d2a24c&quot;], [&quot;#c25a48&quot;, &quot;#dd7a64&quot;], [&quot;#2f8f7f&quot;, &quot;#46a892&quot;], [&quot;#2f6ea8&quot;, &quot;#4d8fc8&quot;]], &quot;default&quot;: [&quot;#bd8329&quot;, &quot;#d2a24c&quot;], &quot;tsType&quot;: &quot;string[]&quot; },
+  &quot;brightHero&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; }
+}">
+class Component extends DCLogic {
+  hexToRgba(hex, a) {
+    const h = (hex || '#bd8329').replace('#', '');
+    const n = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+    const r = parseInt(n.slice(0, 2), 16), g = parseInt(n.slice(2, 4), 16), b = parseInt(n.slice(4, 6), 16);
+    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+  }
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-flask" aria-hidden="true"></i></span>
-							<h4>High-throughput function</h4>
-							<p>Deep mutational scanning and automated patch clamp measure variant effects at scale, including the most complete <i>KCNH2</i>/Kv11.1 map to date.</p>
-						</div>
+  applyTheme() {
+    const root = document.querySelector('[data-root]');
+    if (!root) return;
+    // mood
+    const moodMap = { 'Dawn': 'dawn', 'Dusk': 'dusk', 'Midnight': 'midnight' };
+    const mood = moodMap[this.props.mood] || 'dawn';
+    root.setAttribute('data-mood', mood);
+    this._mood = mood;
+    // accent (array [base, bright])
+    let acc = this.props.accent;
+    if (!Array.isArray(acc)) acc = ['#bd8329', '#d2a24c'];
+    const base = acc[0] || '#bd8329';
+    const bright = acc[1] || acc[0] || '#d2a24c';
+    root.style.setProperty('--accent', base);
+    root.style.setProperty('--accent-bright', bright);
+    root.style.setProperty('--accent-line', this.hexToRgba(base, 0.35));
+    root.style.setProperty('--accent-glow', this.hexToRgba(base, mood === 'dawn' ? 0.12 : 0.14));
+    // hero brightness
+    const bright_hero = this.props.brightHero !== false;
+    const img = document.getElementById('kl-hero-img');
+    const ov = document.getElementById('kl-hero-overlay');
+    if (img) img.style.opacity = bright_hero ? '1' : '0.9';
+    if (ov) ov.style.background = bright_hero
+      ? 'linear-gradient(90deg, rgba(20,13,7,.74) 0%, rgba(20,13,7,.4) 46%, rgba(20,13,7,.04) 100%)'
+      : 'linear-gradient(90deg, rgba(8,6,4,.94) 0%, rgba(8,6,4,.72) 44%, rgba(8,6,4,.25) 100%)';
+    this.applyHeader();
+  }
 
-						<div class="thrust">
-							<span class="ico"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
-							<h4>Stem-cell &amp; clinical models</h4>
-							<p>CRISPR-edited iPSC-cardiomyocytes test how polygenic background shifts expressivity, and survival models flag breakthrough cardiac events despite beta-blocker therapy.</p>
-						</div>
+  applyHeader() {
+    const header = document.getElementById('kl-header');
+    if (!header) return;
+    const y = window.scrollY || window.pageYOffset;
+    const logo = header.querySelector('[data-logo]');
+    const navlinks = header.querySelectorAll('[data-navlink]');
+    const scrolled = y > 40;
+    if (scrolled) {
+      const light = this._mood === 'dawn';
+      header.style.background = light ? 'rgba(250,247,240,.86)' : 'rgba(12,10,8,.86)';
+      header.style.backdropFilter = 'saturate(150%) blur(12px)';
+      header.style.webkitBackdropFilter = 'saturate(150%) blur(12px)';
+      header.style.borderBottomColor = light ? 'rgba(40,31,16,.1)' : 'rgba(236,232,223,.1)';
+      header.style.padding = '14px 44px';
+      if (logo) logo.style.color = light ? '#221c14' : '#f4f1e8';
+      navlinks.forEach(a => { a.style.color = light ? '#5a5347' : '#cfcabf'; });
+    } else {
+      header.style.background = 'linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,0))';
+      header.style.backdropFilter = 'none';
+      header.style.webkitBackdropFilter = 'none';
+      header.style.borderBottomColor = 'transparent';
+      header.style.padding = '20px 44px';
+      if (logo) logo.style.color = '#f7f4ec';
+      navlinks.forEach(a => { a.style.color = '#e2ddd2'; });
+    }
+  }
 
-					</div>
-					<ul class="tags" style="justify-content:center;">
-						<li>Long QT syndrome</li><li>Brugada syndrome</li><li>Atrial fibrillation</li>
-						<li>KCNH2</li><li>SCN5A</li><li>KCNQ1</li><li>RyR2</li>
-						<li>AlphaFold</li><li>PyMC</li><li>iPSC-CMs</li>
-					</ul>
-				</div>
-			</section>
+  componentDidMount() {
+    const heroImg = document.getElementById('kl-hero-img');
+    const onScroll = () => {
+      this.applyHeader();
+      const y = window.scrollY || window.pageYOffset;
+      if (heroImg && y < 920) heroImg.style.transform = 'translateY(' + (y * 0.16) + 'px)';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    this._onScroll = onScroll;
+    this.applyTheme();
+    onScroll();
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('kl-in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('kl-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(el => io.observe(el));
+      setTimeout(() => reveals.forEach(el => el.classList.add('kl-in')), 2500);
+    }
+  }
 
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<img src="images/kcnq1+kcne3.jpg" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>What can help you determine the significance of genetic variants?</p>
-										<h2>Resources</h2>
-									</header>
-									<p> A list of useful resources for those trying to determine the significance of genetic variants.</p>
-									<footer class="align-center">
-										<a href="Resources.html" class="button alt">Learn More</a>
-									</footer>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<video onloadedmetadata="this.muted=true" autoplay src="images/hipsc-cms2.mp4" alt="" />
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>Who does this work?</p>
-										<h2>People</h2>
-									</header>
-									<p> Current and past group members</p>
-									<footer class="align-center">
-										<a href="People.html" class="button alt">Learn More</a>
-									</footer>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="People.html" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				Kroncke Laboratory<br>Vanderbilt University Medical Center<br>
-			Vanderbilt Center for Arrhythmia Research and Therapeutics (VanCART)<br>1225E MRBIV<br>2215B Garland Ave.<br>Nashville, TN 37232<br>Email: brett.kroncke@gmail.com
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/refresh.js"></script>
-
-	</body>
+  componentDidUpdate() {
+    this.applyTheme();
+  }
+}
+</script>
+</body>
 </html>

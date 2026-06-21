@@ -1,221 +1,215 @@
-<!DOCTYPE HTML>
-<!--
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>People — Kroncke Laboratory</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="The people of the Kroncke Lab at Vanderbilt University Medical Center — principal investigator Brett Kroncke, Ph.D., and the team advancing translational cardiogenetics." />
-		<meta name="author" content="Brett Kroncke" />
-		<meta name="theme-color" content="#8a4680" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/css/refresh.css" />
-		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-	</head>
-	<body class="subpage">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People — Kroncke Laboratory</title>
+<meta name="description" content="The Kroncke Lab team at Vanderbilt University Medical Center, spanning functional genomics, computation, and clinical interpretation of genetic variants.">
+<meta name="author" content="Brett Kroncke">
+<meta name="theme-color" content="#c9a24e">
+<meta property="og:title" content="People — Kroncke Laboratory">
+<meta property="og:description" content="Meet the Kroncke Lab team working across wet-lab, computational, and clinical variant interpretation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="site/images/BrettKroncke.jpg">
+<meta property="og:url" content="https://kroncke-lab.github.io/People.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#0b0e0c;}
+  a{text-decoration:none;color:inherit;}
+  @keyframes kl-zoom{from{transform:scale(1.08);}to{transform:scale(1.0);}}
+  [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+  [data-reveal].kl-in{opacity:1;transform:none;}
+  .kl-card{transition:transform .28s ease, border-color .28s ease, background .28s ease;}
+  .kl-card:hover{transform:translateY(-5px);border-color:rgba(201,162,78,.5)!important;background:#161b14!important;}
+  .kl-link{transition:color .18s ease;}
+  .kl-link:hover{color:#d8b56a!important;}
+  .kl-nav a{transition:color .18s ease;}
+  .kl-nav a:hover{color:#d8b56a;}
+  @media (max-width:980px){
+    .kl-pi{grid-template-columns:1fr!important;}
+    .kl-grid3{grid-template-columns:1fr 1fr!important;}
+    .kl-h1{font-size:46px!important;}
+    .kl-nav{display:none!important;}
+    .kl-pad{padding-left:24px!important;padding-right:24px!important;}
+  }
+  @media (max-width:620px){
+    .kl-grid3{grid-template-columns:1fr!important;}
+    footer .kl-pad{grid-template-columns:1fr!important;}
+    footer a{overflow-wrap:anywhere;}
+  }
+  @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;}}
+</style>
+</helmet>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">Kroncke Laboratory</a></div>
-				<a href="#menu">Menu</a>
-			</header>
+<div style="background:#0b0e0c; color:#ece8df; font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
 
-			<!-- Nav -->
-				<nav id="menu">
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="ResearchProjects.html">Research Projects</a></li>
-						<li><a href="People.html">People</a></li>
-						<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank">Publications</a></li>
-						<li><a href="Resources.html">Resources</a></li>
-					</ul>
-				</nav>
+  <!-- Header -->
+  <header id="kl-header" style="position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 44px; transition:background .3s ease, padding .3s ease, border-color .3s ease; border-bottom:1px solid transparent; background:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0));">
+    <a href="index.html" style="font-family:'Spectral',serif; font-size:21px; font-weight:500; color:#f4f1e8;">Kroncke Laboratory</a>
+    <nav class="kl-nav" style="display:flex; gap:32px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.05em; color:#c3bfb4;">
+      <a href="ResearchProjects.html">Research</a>
+      <a href="People.html" style="color:#d8b56a;">People</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank">Publications</a>
+      <a href="Resources.html">Resources</a>
+      <a href="OpenPositions.html" style="color:#c9a24e;">Join</a>
+    </nav>
+  </header>
 
-		<!-- One -->
-			<section id="One" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>Who does this work?</p>
-						<h2>People</h2>
-					</header>
-				</div>
-			</section>
+  <!-- Hero -->
+  <section style="position:relative; height:54vh; min-height:380px; max-height:520px; overflow:hidden;">
+    <img src="site/images/maptostructurefreq.jpg" alt="" style="position:absolute; inset:0; width:100%; height:108%; object-fit:cover; opacity:.5; animation:kl-zoom 14s ease-out forwards;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(11,14,12,.95) 0%, rgba(11,14,12,.8) 55%, rgba(11,14,12,.55) 100%);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(11,14,12,.97) 0%, rgba(11,14,12,0) 50%);"></div>
+    <div class="kl-pad" style="position:relative; z-index:2; height:100%; max-width:1180px; margin:0 auto; padding:0 44px; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:56px;">
+      <div data-reveal style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.26em; text-transform:uppercase; color:#c9a24e; margin-bottom:20px; display:flex; align-items:center; gap:14px;"><span style="width:34px; height:1px; background:#c9a24e;"></span>Who does this work</div>
+      <h1 class="kl-h1" data-reveal style="font-family:'Spectral',serif; font-weight:400; font-size:60px; line-height:1.05; letter-spacing:-.015em; margin:0; color:#f7f4ec; transition-delay:.08s;">People</h1>
+      <p data-reveal style="font-size:18px; line-height:1.7; color:#c8c4b9; margin:22px 0 0; max-width:600px; transition-delay:.16s;">A multidisciplinary team — wet-lab, computation and clinic — dedicated to understanding how genetic variation shapes individual risk.</p>
+    </div>
+  </section>
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
+  <!-- PI -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:78px 44px 30px;">
+    <div data-reveal style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#c9a24e; margin-bottom:28px;">Principal Investigator</div>
+    <div class="kl-pi" data-reveal style="display:grid; grid-template-columns:210px 1fr; gap:48px; align-items:start;">
+      <div style="max-width:210px;">
+        <div style="border:1px solid rgba(236,232,223,.14); border-radius:4px; overflow:hidden; background:#11150f;">
+          <img src="site/images/BrettKroncke.jpg" alt="Brett Kroncke" style="width:100%; display:block; aspect-ratio:3/3.4; object-fit:cover; object-position:top center;">
+        </div>
+        <div style="margin-top:18px; border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#0e1210; padding:18px 20px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:#9a978c; margin-bottom:8px;">Contact</div>
+          <a href="mailto:brett.kroncke@gmail.com" class="kl-link" style="font-size:13.5px; color:#d8b56a; word-break:break-all;">brett.kroncke@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:34px; margin:0 0 8px; color:#f4f1e8;">Brett Kroncke, Ph.D.</h2>
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.02em; color:#c9a24e; margin:0 0 14px;">Assistant Professor of Medicine · Director, Kroncke Lab</p>
+        <p style="font-size:13.5px; line-height:1.7; color:#8a877d; margin:0 0 26px; max-width:680px;">Vanderbilt University Medical Center · VanCART · Department of Pharmacology · Center for Structural Biology · Vanderbilt Genomics Institute · Data Science Institute</p>
+        <div style="display:flex; flex-direction:column; gap:18px; max-width:720px;">
+          <p style="font-size:15.5px; line-height:1.8; color:#bdb9ae; margin:0;">Brett founded the Kroncke Lab in 2019 to build a translational genomics program focused on molecular cardiogenetics, leading a multidisciplinary team dedicated to understanding how genetic variation shapes individual risk for arrhythmia and adverse clinical outcomes.</p>
+          <p style="font-size:15.5px; line-height:1.8; color:#bdb9ae; margin:0;"><strong style="color:#ece8df; font-weight:600;">Research focus.</strong> We develop high-throughput experimental pipelines, CRISPR-edited iPSC models, and predictive statistical frameworks to resolve variants of uncertain significance in ion-channel genes such as <em style="font-style:italic;">KCNH2</em> and <em style="font-style:italic;">SCN5A</em>. Most recently the lab has built an open-source, LLM-assisted pipeline for literature curation and variant interpretation, extending these methods from long QT and Brugada syndromes to atrial fibrillation.</p>
+          <p style="font-size:15.5px; line-height:1.8; color:#bdb9ae; margin:0;"><strong style="color:#ece8df; font-weight:600;">Innovation &amp; translation.</strong> Brett is the inventor on the 2022 patent <em style="font-style:italic;">Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) and developed VariantBrowser.org, a portal that disseminates penetrance estimates to clinicians, genetic counselors and researchers.</p>
+          <p style="font-size:15.5px; line-height:1.8; color:#bdb9ae; margin:0;"><strong style="color:#ece8df; font-weight:600;">Grants &amp; training.</strong> Funding includes NIH R01HL160863 (2022–2027), NIH K99/R00 HL135442 (2017–2022), and an AHA Career Development Award (2021–2024). Brett earned his Ph.D. in Biophysics from the University of Virginia and trained as a postdoc at Vanderbilt, integrating structural biology with cardiac arrhythmia genetics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					<header class="align-center">
-						<h2>Principal Investigator</h2>
-					</header>
-					<div class="people">
-						<div class="person featured">
-							<div class="avatar"><img src="images/BrettKroncke.jpg" alt="Brett Kroncke" /></div>
-							<div class="body">
-								<h3 class="name">Brett Kroncke, Ph.D.</h3>
-								<p class="role">Assistant Professor of Medicine &middot; Director, Kroncke Lab</p>
-								<p class="affil">Vanderbilt University Medical Center &middot; Vanderbilt Center for Arrhythmia Research and Therapeutics (VanCART) &middot; Department of Pharmacology &middot; Center for Structural Biology &middot; Vanderbilt Genomics Institute &middot; Data Science Institute</p>
-								<p class="contact"><a href="mailto:brett.kroncke@gmail.com">brett.kroncke@gmail.com</a></p>
-								<div class="bio">
-									<p>Brett founded the Kroncke Lab in 2019 to build a translational genomics program focused on molecular cardiogenetics, leading a multidisciplinary team dedicated to understanding how genetic variation shapes individual risk for arrhythmia and adverse clinical outcomes.</p>
-									<p><b>Research focus.</b> We develop high-throughput experimental pipelines, CRISPR-edited induced pluripotent stem cell models, and predictive statistical frameworks to resolve variants of uncertain significance in ion channel genes such as <i>KCNH2</i> and <i>SCN5A</i>. Our group leverages polygenic background to interpret penetrance in stem cell-derived cardiomyocytes and has advanced statistical methods that translate functional and genomic data into individualized risk profiles. Most recently, the lab has built an open-source, LLM-assisted pipeline for literature curation and variant interpretation, and is extending these methods from long QT and Brugada syndromes to atrial fibrillation.</p>
-									<p><b>Innovation and translation.</b> Brett is the inventor on the 2022 patent <em>Bayesian Method to Estimate Variant-Induced Disease Penetrance</em> (US-20220406461-A1) and developed VariantBrowser.org, a clinical and research portal that disseminates penetrance estimates and functional insights to clinicians, genetic counselors, and researchers.</p>
-									<p><b>Grants and awards.</b> Current and recent funding includes NIH R01HL160863 (2022&ndash;2027), NIH K99/R00 HL135442 (2017&ndash;2022), and an American Heart Association Career Development Award (2021&ndash;2024).</p>
-									<p><b>Education and training.</b> Brett earned his Ph.D. in Biophysics from the University of Virginia, where he developed methods to measure membrane protein flexibility and structure, and completed postdoctoral training at Vanderbilt that integrated structural biology with cardiac arrhythmia genetics and predictive modeling.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+  <!-- Research Assistants -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:60px 44px 20px;">
+    <div data-reveal style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#c9a24e; margin-bottom:26px; border-top:1px solid rgba(236,232,223,.12); padding-top:48px;">Research Assistants</div>
+    <div data-reveal class="kl-card" style="display:grid; grid-template-columns:96px 1fr; gap:26px; align-items:start; border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:30px 32px; max-width:760px;">
+      <div style="width:96px; height:96px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:30px; color:#16130c; font-weight:500;">DM</div>
+      <div>
+        <h3 style="font-family:'Spectral',serif; font-weight:500; font-size:22px; margin:0 0 4px; color:#f4f1e8;">Devyn Mitchell</h3>
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#c9a24e; margin:0 0 12px;">Research Assistant · joined 2019</p>
+        <p style="font-size:14.5px; line-height:1.7; color:#a8a499; margin:0;">A key contributor to our research on the genetics of heart arrhythmias, focusing on high-throughput characterization of <em style="font-style:italic;">KCNH2</em> variants. His initiative enabled the lab's pivot to iPSCs — reprogramming PBMCs to hiPSCs and leading characterization of differentiated cardiomyocytes on the Nanion CardioExcyte96.</p>
+      </div>
+    </div>
+  </section>
 
-					<header class="align-center">
-						<h2>Research Assistants</h2>
-					</header>
-					<div class="people">
-						<div class="person">
-							<div class="avatar"><div class="monogram">DM</div></div>
-							<div class="body">
-								<h3 class="name">Devyn Mitchell</h3>
-								<p class="role">Research Assistant</p>
-								<p class="contact"><a href="mailto:devyn.w.mitchell@vumc.org">devyn.w.mitchell@vumc.org</a></p>
-								<div class="bio">
-									<p>Since joining the lab in June 2019, Devyn has become a key contributor to our research on the genetic underpinnings of heart arrhythmias, focusing on the high-throughput experimental characterization of <i>KCNH2</i> variants through heterologous expression in HEK cells and endogenous studies in SH-SY5Y cells. His initiative enabled the lab to pivot to induced pluripotent stem cells (iPSCs) as a research model &mdash; reprogramming PBMCs to hiPSCs and leading the characterization of differentiated cardiomyocytes, including functional analysis on the Nanion CardioExcyte96.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+  <!-- Former members -->
+  <section class="kl-pad" style="max-width:1180px; margin:0 auto; padding:48px 44px 80px;">
+    <div data-reveal style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#c9a24e; margin-bottom:30px; border-top:1px solid rgba(236,232,223,.12); padding-top:48px;">Former Lab Members</div>
+    <div class="kl-grid3" data-reveal style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
 
-					<header class="align-center">
-						<h2>Former Lab Members</h2>
-					</header>
-					<div class="people">
-						<div class="person">
-							<div class="avatar"><img src="images/rizwan_ullah_2.jpg" alt="Rizwan Ullah" /></div>
-							<div class="body">
-								<h3 class="name">Rizwan Ullah, Ph.D.</h3>
-								<p class="role">Postdoctoral Fellow &middot; joined 2019</p>
-								<div class="bio">
-									<p>Dr. Ullah earned his Ph.D. in Zoology from Aligarh Muslim University in 2019, where he characterized cathepsin L, a cysteine protease from the liver fluke <i>Fasciola gigantica</i>, identified candidate therapeutic molecules for parasite control, and used the protein as a diagnostic antigen to detect field infections.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">LV</div></div>
-							<div class="body">
-								<h3 class="name">Loren Vanags</h3>
-								<p class="role">Research Assistant &middot; joined 2018</p>
-								<div class="bio">
-									<p>Loren was instrumental in establishing the lab's wet-lab facilities and advancing our research on the genetic determinants of heart arrhythmias. Her expertise in CRISPR-Cas9 editing of induced pluripotent stem cells (iPSCs) was pivotal in characterizing arrhythmia-associated variants. She developed and validated functional assays for the <i>RYR2</i> gene in both HEK293 cells and human iPSC-derived cardiomyocytes (hiPSC-CMs), ran the lab's fluorescence-activated cell sorting (FACS) experiments, and helped generate the most comprehensive map of variant effects for the cardiac potassium channel gene <i>KCNH2</i>.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><img src="images/kozek_krystian.jpg" alt="Krystian Kozek" /></div>
-							<div class="body">
-								<h3 class="name">Krystian Kozek, Ph.D.</h3>
-								<p class="role">Kroncke Lab &middot; 2018&ndash;2019</p>
-								<div class="bio">
-									<p>Krystian completed his Ph.D. in the lab of David Weaver in the Department of Pharmacology, Vanderbilt University, in 2018, focusing on modulation of GIRK channels by small molecules. In the Kroncke Lab he refined methods for high-throughput characterization of missense variants in the cardiac potassium channel Kv11.1 (gene <i>KCNH2</i>/hERG).</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">MK</div></div>
-							<div class="body">
-								<h3 class="name">Matthew Ku</h3>
-								<p class="role">iPSC-cardiomyocyte electrophysiology</p>
-								<div class="bio">
-									<p>Matthew contributed to the lab's iPSC-cardiomyocyte electrophysiology toolkit &mdash; including high-throughput analysis of extracellular field potentials &mdash; and to studies of RYR2&ndash;CPVT penetrance and Kv11.1 trafficking.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">SW</div></div>
-							<div class="body">
-								<h3 class="name">Suah Woo</h3>
-								<p class="role">iPSC-cardiomyocyte electrophysiology</p>
-								<div class="bio">
-									<p>Suah worked on iPSC-cardiomyocyte extracellular field-potential analysis and on quantitative proteomics of Kv11.1 (hERG) trafficking in cardiomyocytes.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">AS</div></div>
-							<div class="body">
-								<h3 class="name">Alex Shen</h3>
-								<p class="role">RyR2 / CPVT penetrance</p>
-								<div class="bio">
-									<p>Alex led the lab's structural and Bayesian analysis of <i>RYR2</i> missense variants in catecholaminergic polymorphic ventricular tachycardia (CPVT), producing continuous estimates of variant penetrance.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">KD</div></div>
-							<div class="body">
-								<h3 class="name">Kundivy Dauda</h3>
-								<p class="role">Undergraduate researcher</p>
-								<div class="bio">
-									<p>A Vanderbilt undergraduate and Chancellor's Scholar, Kundivy curated carrier and phenotype data and contributed to the lab's <i>RYR2</i>&ndash;CPVT penetrance estimates.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">NP</div></div>
-							<div class="body">
-								<h3 class="name">Nidhi Patel</h3>
-								<p class="role">iPSC-cardiomyocyte electrophysiology</p>
-								<div class="bio">
-									<p>Nidhi contributed to the lab's iPSC-cardiomyocyte extracellular field-potential analysis tools.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">WM</div></div>
-							<div class="body">
-								<h3 class="name">William Morris</h3>
-								<p class="role">iPSC-cardiomyocyte electrophysiology</p>
-								<div class="bio">
-									<p>William contributed to the lab's iPSC-cardiomyocyte extracellular field-potential analysis tools.</p>
-								</div>
-							</div>
-						</div>
-						<div class="person">
-							<div class="avatar"><div class="monogram">KY</div></div>
-							<div class="body">
-								<h3 class="name">Kohei Yamauchi</h3>
-								<p class="role">Visiting researcher &middot; Shiga University of Medical Science (Japan)</p>
-								<div class="bio">
-									<p>A visiting researcher from the Department of Cardiovascular Medicine, Shiga University of Medical Science (Japan), Kohei collaborated on <i>RYR2</i>&ndash;CPVT penetrance and arrhythmia cohort analyses.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><img src="site/images/rizwan_ullah_2.jpg" alt="Rizwan Ullah" style="width:62px; height:62px; border-radius:4px; object-fit:cover; object-position:top center;"><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Rizwan Ullah, Ph.D.</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">Postdoctoral Fellow · 2019</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Ph.D. in Zoology (Aligarh Muslim University, 2019); characterized cathepsin L from the liver fluke <em style="font-style:italic;">Fasciola gigantica</em> and identified candidate therapeutics.</p></div>
 
-				</div>
-			</section>
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">LV</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Loren Vanags</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">Research Assistant · 2018</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Established the lab's wet-lab facilities; expert in CRISPR-Cas9 editing of iPSCs, developed <em style="font-style:italic;">RYR2</em> functional assays and helped map variant effects for <em style="font-style:italic;">KCNH2</em>.</p></div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="People.html" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				Kroncke Laboratory<br>Vanderbilt University Medical Center<br>
-			Vanderbilt Center for Arrhythmia Research and Therapeutics (VanCART)<br>1225E MRBIV<br>2215B Garland Ave.<br>Nashville, TN 37232<br>Email: brett.kroncke@gmail.com
-			</footer>
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><img src="site/images/kozek_krystian.jpg" alt="Krystian Kozek" style="width:62px; height:62px; border-radius:4px; object-fit:cover; object-position:top center;"><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Krystian Kozek, Ph.D.</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">Kroncke Lab · 2018–2019</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Ph.D. in Pharmacology (Vanderbilt, 2018) on GIRK-channel modulation; refined high-throughput characterization of missense variants in Kv11.1 (<em style="font-style:italic;">KCNH2</em>/hERG).</p></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/refresh.js"></script>
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">MK</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Matthew Ku</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">iPSC-CM electrophysiology</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Contributed to the lab's iPSC-cardiomyocyte toolkit — high-throughput extracellular field-potential analysis — and to RYR2–CPVT penetrance and Kv11.1 trafficking studies.</p></div>
 
-	</body>
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">SW</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Suah Woo</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">iPSC-CM electrophysiology</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Worked on iPSC-cardiomyocyte field-potential analysis and quantitative proteomics of Kv11.1 (hERG) trafficking in cardiomyocytes.</p></div>
+
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">AS</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Alex Shen</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">RyR2 / CPVT penetrance</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Led structural and Bayesian analysis of <em style="font-style:italic;">RYR2</em> missense variants in CPVT, producing continuous estimates of variant penetrance.</p></div>
+
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">KD</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Kundivy Dauda</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">Undergraduate researcher</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">A Vanderbilt undergraduate and Chancellor's Scholar; curated carrier and phenotype data and contributed to the lab's <em style="font-style:italic;">RYR2</em>–CPVT penetrance estimates.</p></div>
+
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">NP</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Nidhi Patel</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">iPSC-CM electrophysiology</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Contributed to the lab's iPSC-cardiomyocyte extracellular field-potential analysis tools.</p></div>
+
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">WM</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">William Morris</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">iPSC-CM electrophysiology</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">Contributed to the lab's iPSC-cardiomyocyte extracellular field-potential analysis tools.</p></div>
+
+      <div class="kl-card" style="border:1px solid rgba(236,232,223,.12); border-radius:4px; background:#11150f; padding:26px;"><div style="display:flex; gap:16px; align-items:center; margin-bottom:14px;"><div style="width:62px; height:62px; border-radius:4px; display:grid; place-items:center; background:linear-gradient(135deg,#c9a24e,#9a6f3a); font-family:'Spectral',serif; font-size:20px; color:#16130c;">KY</div><div><h4 style="font-family:'Spectral',serif; font-weight:500; font-size:18px; margin:0; color:#f4f1e8;">Kohei Yamauchi</h4><p style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#c9a24e; margin:3px 0 0;">Visiting researcher · Japan</p></div></div><p style="font-size:13.5px; line-height:1.62; color:#a8a499; margin:0;">A visiting researcher from Shiga University of Medical Science; collaborated on <em style="font-style:italic;">RYR2</em>–CPVT penetrance and arrhythmia cohort analyses.</p></div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top:1px solid rgba(236,232,223,.1); background:#070907;">
+    <div class="kl-pad" style="max-width:1180px; margin:0 auto; padding:60px 44px 44px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;">
+      <div>
+        <div style="font-family:'Spectral',serif; font-size:21px; font-weight:500; color:#f4f1e8; margin-bottom:14px;">Kroncke Laboratory</div>
+        <p style="font-size:13.5px; line-height:1.7; color:#8a877d; margin:0; font-family:'IBM Plex Mono',monospace; letter-spacing:.01em;">Vanderbilt University Medical Center<br>Vanderbilt Center for Arrhythmia Research<br>and Therapeutics (VanCART)<br>1225E MRBIV · 2215B Garland Ave.<br>Nashville, TN 37232</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#c9a24e; margin-bottom:16px;">Navigate</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:#bdb9ae;">
+          <a href="ResearchProjects.html" class="kl-link">Research Projects</a>
+          <a href="People.html" class="kl-link">People</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kroncke+B%5BAuthor%5D&sort=date" target="_blank" class="kl-link">Publications</a>
+          <a href="Resources.html" class="kl-link">Resources</a>
+          <a href="OpenPositions.html" class="kl-link">Join the lab</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#c9a24e; margin-bottom:16px;">Contact</div>
+        <a href="mailto:brett.kroncke@gmail.com" class="kl-link" style="font-size:14px; color:#bdb9ae;">brett.kroncke@gmail.com</a>
+        <div style="margin-top:18px;"><a href="https://github.com/kroncke-lab" target="_blank" class="kl-link" style="font-size:14px; color:#bdb9ae;">github.com/kroncke-lab</a></div>
+      </div>
+    </div>
+    <div class="kl-pad" style="max-width:1180px; margin:0 auto; padding:18px 44px 40px; border-top:1px solid rgba(236,232,223,.07); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; color:#6a6760;">© 2026 Kroncke Laboratory · Vanderbilt University Medical Center</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const header = document.getElementById('kl-header');
+    const onScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      if (header) {
+        if (y > 40) {
+          header.style.background = 'rgba(9,12,10,.86)';
+          header.style.backdropFilter = 'saturate(150%) blur(12px)';
+          header.style.webkitBackdropFilter = 'saturate(150%) blur(12px)';
+          header.style.borderBottomColor = 'rgba(236,232,223,.1)';
+          header.style.padding = '14px 44px';
+        } else {
+          header.style.background = 'linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0))';
+          header.style.backdropFilter = 'none';
+          header.style.webkitBackdropFilter = 'none';
+          header.style.borderBottomColor = 'transparent';
+          header.style.padding = '20px 44px';
+        }
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('kl-in'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('kl-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+      reveals.forEach(el => io.observe(el));
+      setTimeout(() => reveals.forEach(el => el.classList.add('kl-in')), 2500);
+    }
+  }
+}
+</script>
+</body>
 </html>
